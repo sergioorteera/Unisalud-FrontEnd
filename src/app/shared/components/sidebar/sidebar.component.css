@@ -45,12 +45,16 @@ li {
 }
 
 .menu-one {
+  padding-left: 76px;
+  padding-top: 17px;
+  padding-bottom: 17px;
   font-family: "FiraSans-Bold";
   text-decoration: none;
   font-size: 16px;
 }
 
 .menu-two {
+  padding-left: 100px;
   font-family: "FiraSans-Regular";
   text-decoration: none;
   font-size: 16px;
@@ -65,7 +69,7 @@ li {
 }
 
 .sidebar-link {
-  padding: 20px 22px;
+
   color: var(--gray-primary);
   display: block;
   font-size: 16px;
@@ -74,7 +78,7 @@ li {
 
 .sidebar-item {
   font-family: "FiraSans-Regular";
-  width: 324.39px;
+
   height: auto;
   position: relative;
 }
@@ -97,3 +101,7 @@ li {
 
 }
 
+a.sidebar-link {
+
+
+}
