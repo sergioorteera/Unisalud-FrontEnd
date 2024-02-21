@@ -1,0 +1,99 @@
+.sidebar-container {
+  background-color: var(--blue-primary);
+}
+
+.tittle-menu{
+
+  font-size: 16px;
+}
+
+.image-menu{
+  height: 56px;
+  width: 36px;
+}
+
+.container-line {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container-image {
+  align-items: center;
+  color: #ffffff;
+  height: 82px;
+  text-align: center;
+  display: flex;
+  padding: 30px;
+  padding-top: 40px;
+  padding-left: 40px;
+}
+
+.tittle-menu{
+  font-family: "myGaramond";
+  font-size: 16px;
+}
+
+.line {
+  height: 1px;
+  background-color: var(--red-primary);
+  width: 270px;
+}
+
+li {
+  list-style: none;
+}
+
+.menu-one {
+  font-family: "FiraSans-Bold";
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.menu-two {
+  font-family: "FiraSans-Regular";
+  text-decoration: none;
+  font-size: 16px;
+}
+
+
+#sidebar {
+  width: 323px;
+  height: 100vh;
+  background-color: var(--blue-primary);
+  flex-direction: column;
+}
+
+.sidebar-link {
+  padding: 20px 22px;
+  color: var(--gray-primary);
+  display: block;
+  font-size: 16px;
+  font-style: normal;
+}
+
+.sidebar-item {
+  font-family: "FiraSans-Regular";
+  width: 324.39px;
+  height: auto;
+  position: relative;
+}
+
+.selected-item {
+  background-color: rgb(251, 248, 255, 20%);
+  border-radius: 7px;
+}
+
+#sidebar .sidebar-dropdown .sidebar-link:hover {
+  background-color: rgb(251, 248, 255, 20%);
+}
+
+.sidebar-link:hover {
+  background-color: rgb(251, 248, 255, 20%);
+}
+
+.sidebar-nav {
+  padding: 0;
+
+}
+

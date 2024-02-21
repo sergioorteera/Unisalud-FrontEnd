@@ -1,0 +1,70 @@
+<aside id="sidebar">
+
+  <div class="sidebar-container text-light py-3">
+
+    <div class="container-image">
+      <img class="image-menu" src="assets/images/logo-menu.png" />
+      <h4 class="tittle-menu mt-3 ms-3">División de Unidad de Salud</h4>
+    </div>
+
+    <div class="container-line">
+      <div class="line"></div>
+    </div>
+
+  </div>
+
+  <ul class="sidebar-nav">
+
+    <li class="sidebar-item">
+
+      <a href="#" class="sidebar-link menu-one text-nowrap collapsed has-dropdown"
+
+        [ngClass]="{'selected-item': selectedItem === 'assurance'}" (click)="selectItem('assurance')"
+
+        data-bs-toggle="collapse" data-bs-target="#assurance" aria-expanded="false" aria-controls="assurance">
+
+
+
+        <span>Aseguramiento</span>
+
+      </a>
+
+      <ul id="assurance" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+        <li class="sidebar-item">
+          <a href="#" class="sidebar-link text-nowrap menu-two">Item 1</a>
+        </li>
+        <li class="sidebar-item">
+          <a href="#" class="sidebar-link text-nowrap menu-two">Item 2</a>
+        </li>
+      </ul>
+    </li>
+
+    <li class="sidebar-item">
+
+      <a href="#" class="sidebar-link menu-one text-nowrap collapsed has-dropdown"
+
+        [ngClass]="{'selected-item': selectedItem === 'hiring'}" (click)="selectItem('hiring')"
+
+        data-bs-toggle="collapse" data-bs-target="#hiring" aria-expanded="false" aria-controls="hiring">
+
+        <img [src]="'./assets/icons/shield.svg'" alt="Search Box Icon">
+
+        <span>Contratación</span>
+
+      </a>
+
+      <ul id="hiring" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+        <li class="sidebar-item">
+          <a href="#" class="sidebar-link text-nowrap menu-two">Item 1</a>
+        </li>
+        <li class="sidebar-item">
+          <a href="#" class="sidebar-link text-nowrap menu-two">Item 2</a>
+        </li>
+      </ul>
+    </li>
+
+
+
+
+  </ul>
+</aside>

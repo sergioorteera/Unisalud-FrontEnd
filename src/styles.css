@@ -1,1 +1,44 @@
-/* You can add global styles to this file, and also import other style files */
+
+
+/* colors */
+
+:root {
+  --blue-primary: #000066; /* Azul primario */
+
+  --red-primary: #DB141C; /* Rojo primario */
+
+  --gray-primary: #F2EFFA; /* Gris primario */
+
+  --white-primary: #ffffff;  /* Blanco primario */
+
+  --gray-background: #E4E1EC;  /* Gris fondo */
+
+
+}
+
+/* Fonts */
+
+@font-face {
+  font-family: "FiraSans-Black";
+  src: url('./assets/fonts/FiraSans-Black.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: "FiraSans-Bold";
+  src: url('./assets/fonts/FiraSans-Bold.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: "FiraSans-Light";
+  src: url('./assets/fonts/FiraSans-Light.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: "FiraSans-Regular";
+  src: url('./assets/fonts/FiraSans-Regular.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: "FiraSans-SemiBold";
+  src: url('./assets/fonts/FiraSans-SemiBold.ttf') format("truetype");
+}
