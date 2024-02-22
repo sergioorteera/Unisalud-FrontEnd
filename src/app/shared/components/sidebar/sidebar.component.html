@@ -17,11 +17,8 @@
 
     <li class="sidebar-item">
 
-      <a href="#" class="sidebar-link menu-one text-nowrap collapsed has-dropdown"
-
-        [ngClass]="{'selected-item': selectedItem === 'assurance'}" (click)="selectItem('assurance')"
-
-        data-bs-toggle="collapse" data-bs-target="#assurance" aria-expanded="false" aria-controls="assurance">
+      <a href="#" class="sidebar-link menu-one text-nowrap collapse" data-bs-toggle="collapse"
+        data-bs-target="#assurance" aria-controls="assurance" aria-expanded="false">
 
         <img [src]="'./assets/icons/shield.svg'" alt="Search Box Icon">
 
@@ -30,22 +27,40 @@
       </a>
 
       <ul id="assurance" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+
+        <!-- data-bs-toggle="collapse" permite que se despliegue el menú o no -->
+
         <li class="sidebar-item">
-          <a href="#" class="sidebar-link text-nowrap menu-two">Item 1</a>
+
+          <a href="#" class="sidebar-link collapse menu-two" data-bs-toggle="collapse" data-bs-target="#subAssurance"
+            aria-expanded="true" aria-controls="subAssurance">
+            Afiliaciones
+          </a>
+          <ul id="subAssurance" class="sidebar-dropdown list-unstyled collapse">
+            <li class="sidebar-item">
+              <a href="#" class="sidebar-link menu-three">Solicitud de afiliación</a>
+            </li>
+            <li class="sidebar-item">
+              <a href="#" class="sidebar-link menu-three">Gestión de grupo familiar</a>
+            </li>
+            <li class="sidebar-item">
+              <a href="#" class="sidebar-link menu-three">Solicitudes por revisar</a>
+            </li>
+            <li class="sidebar-item">
+              <a routerLink="/aseguramiento/form-area-afiliaciones" class="sidebar-link menu-three">Solicitud de
+                afiliación</a>
+            </li>
+          </ul>
         </li>
-        <li class="sidebar-item">
-          <a href="#" class="sidebar-link text-nowrap menu-two">Item 2</a>
-        </li>
+
       </ul>
+
     </li>
 
     <li class="sidebar-item">
 
-      <a href="#" class="sidebar-link menu-one text-nowrap collapsed has-dropdown"
-
-        [ngClass]="{'selected-item': selectedItem === 'hiring'}" (click)="selectItem('hiring')"
-
-        data-bs-toggle="collapse" data-bs-target="#hiring" aria-expanded="false" aria-controls="hiring">
+      <a href="#" class="sidebar-link menu-one text-nowrap collapse" data-bs-toggle="collapse" data-bs-target="#hiring"
+        aria-controls="hiring" aria-expanded="false">
 
         <img [src]="'./assets/icons/shield.svg'" alt="Search Box Icon">
 
@@ -54,17 +69,35 @@
       </a>
 
       <ul id="hiring" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+
+        <!-- data-bs-toggle="collapse" permite que se despliegue el menú o no -->
+
         <li class="sidebar-item">
-          <a href="#" class="sidebar-link text-nowrap menu-two">Item 1</a>
+
+          <a href="#" class="sidebar-link collapse menu-two" data-bs-toggle="collapse" data-bs-target="#SubHiring"
+            aria-expanded="false" aria-controls="SubHiring">
+            Afiliaciones
+          </a>
+          <ul id="SubHiring" class="sidebar-dropdown list-unstyled collapse">
+            <li class="sidebar-item">
+              <a href="#" class="sidebar-link menu-three">Solicitud de afiliación</a>
+            </li>
+            <li class="sidebar-item">
+              <a href="#" class="sidebar-link menu-three">Gestión de grupo familiar</a>
+            </li>
+            <li class="sidebar-item">
+              <a href="#" class="sidebar-link menu-three">Solicitudes por revisar</a>
+            </li>
+            <li class="sidebar-item">
+              <a routerLink="/aseguramiento/form-area-afiliaciones" class="sidebar-link menu-three">Solicitud de
+                afiliación</a>
+            </li>
+          </ul>
         </li>
-        <li class="sidebar-item">
-          <a href="#" class="sidebar-link text-nowrap menu-two">Item 2</a>
-        </li>
+
       </ul>
+
     </li>
-
-
-
 
   </ul>
 </aside>
