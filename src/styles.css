@@ -3,9 +3,20 @@
 /* colors */
 
 :root {
-  --blue-primary: #000066; /* Azul primario */
 
-  --red-primary: #DB141C; /* Rojo primario */
+  /*AZUL: Color institucional primario: */
+
+  --blue-primary: #000066; /* Color primario */
+  --blue-light: #5056AC; /* Color primario light */
+  --blue-dark: #07184A; /* Color primario dark */
+
+  /*ROJO: Color institucional secundario:*/
+
+  --red-primary: #DB141C; /* Color secundario */
+  --red-light: #9D0311; /* Color secundario light */
+  --red-dark: #690007; /* Rojo primario */
+
+  /*ROJO: Color institucional secundario:*/
 
   --gray-primary: #F2EFFA; /* Gris primario */
 
@@ -13,6 +24,7 @@
 
   --gray-background: #E4E1EC;  /* Gris fondo */
 
+  --gray-secondary: #F2EFFA; /* Gris primario */
 
 }
 
