@@ -1,13 +1,15 @@
 header{
   height: 100px;
-  background: var(--white-primary);
+  background: var(--white);
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 25%);
 }
 
 .title{
-  color: var(--blue-primary);
+  color: var(--blue);
   font-family: "FiraSans-SemiBold";
-  font-size: 20px;
+  font-size: 22px;
+  padding-left: 55px;
+  margin: 0px;
 }
 
 .UserStatus{

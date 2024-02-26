@@ -1,45 +1,9 @@
 .main {
   width: 100%;
   height: 100vh;
-  background-color: #ffff;
+  background-color: var(--gray-background);
   overflow-y: scroll;
   overflow-x: hidden;
 }
 
-.custom-input-container {
-  position: relative;
-  width: 300px; /* Ancho del input personalizado, ajusta según sea necesario */
-}
 
-/* Estilo para la mitad superior del placeholder */
-.placeholder-top {
-  position: absolute;
-  top: 0;
-  left: 30px;
-  width: calc(100% - 200px); /* Ancho del input menos el espacio para los márgenes izquierdo y derecho */
-  overflow: hidden;
-  white-space: nowrap;
-  color: var(--blue-primary);
-  font-size: 14px;
-}
-
-
-/* Estilo para el input */
-.form-control-custom {
-  border-radius: 10px;
-  border: 2px solid #3498db;
-  color: #3498db;
-  font-size: 16px;
-  padding: 10px;
-  width: 100%;
-}
-
-/* Ajusta el estilo del placeholder cuando el input tiene enfoque o contiene texto */
-.form-control-custom:focus + .custom-input-container .placeholder-top,
-.form-control-custom:not(:placeholder-shown) + .custom-input-container .placeholder-top,
-.form-control-custom:focus + .custom-input-container .placeholder-bottom,
-.form-control-custom:not(:placeholder-shown) + .custom-input-container .placeholder-bottom {
-  color: #3498db;
-  background-color: #fff; /* Añade un fondo blanco detrás del título */
-  padding: 0 5px;
-}
