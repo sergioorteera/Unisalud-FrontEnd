@@ -7,19 +7,47 @@ import { Component } from '@angular/core';
 })
 export class SidebarComponent {
 
-  public isExpanded: boolean = true;
-  public selectedItem: string = '';
+  isAffiliationsCollapsed = true;
+  isDataUpdateCollapsed = true;
+  isWithdrawalsCollapsed = true;
+  isPayrollCollapsed = true;
 
-  toggleSidebar() {
-    this.isExpanded = !this.isExpanded;
+  selectedOption: string | null = null;  // Variable para rastrear la opción seleccionada
+
+  toggleAffiliations() {
+    this.selectedOption = null;
+    this.isAffiliationsCollapsed = !this.isAffiliationsCollapsed;
+    this.isDataUpdateCollapsed = true;
+    this.isWithdrawalsCollapsed = true;
+    this.isPayrollCollapsed = true;
   }
 
-  getSidebarIcon() {
-    return this.isExpanded ? './assets/sidebar/collapse-icon.svg': './assets/sidebar/expand-icon.svg' ;
+  toggleDataUpdate() {
+    this.selectedOption = null;
+    this.isAffiliationsCollapsed = true;
+    this.isDataUpdateCollapsed = !this.isDataUpdateCollapsed;
+    this.isWithdrawalsCollapsed = true;
+    this.isPayrollCollapsed = true;
   }
 
-  selectItem(item: string): void {
-    this.selectedItem = item;
+  toggleWithdrawals() {
+    this.selectedOption = null;
+    this.isDataUpdateCollapsed = true;
+    this.isAffiliationsCollapsed = true;
+    this.isWithdrawalsCollapsed = !this.isWithdrawalsCollapsed;
+    this.isPayrollCollapsed = true;
+  }
+
+  togglePayroll() {
+    this.selectedOption = null;
+    this.isDataUpdateCollapsed = true;
+    this.isAffiliationsCollapsed = true;
+    this.isWithdrawalsCollapsed = true;
+    this.isPayrollCollapsed = !this.isPayrollCollapsed;
+  }
+
+  selectOption(option: string) {
+    this.selectedOption = option;
   }
 
 }

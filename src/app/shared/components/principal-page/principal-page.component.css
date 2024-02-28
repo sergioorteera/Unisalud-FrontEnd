@@ -6,4 +6,52 @@
   overflow-x: hidden;
 }
 
+.custom-select-container {
+  position: relative;
+  height: 63px;
+  width: 303px;
+}
+
+.tittle-select {
+  position: absolute;
+  padding-top: 11px;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-family: "FiraSans-SemiBold";
+  font-size: 14px;
+  color: var(--neutral-70);
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.form-select {
+  border-radius: 8px;
+  font-family: "FiraSans-Regular";
+  font-size: 16px;
+  padding-left: 28px;
+  padding-right: 30px;
+  padding-top: 27px;
+  padding-bottom: 8px;
+  color: var(--blue);
+  border-width: 1px;
+  border-color: var(--blue);
+  width: 100%;
+}
+
+.form-select::placeholder {
+  color: var(--blue);
+}
+
+.form-select:focus,
+.form-select:checked {
+  border-color: #00ff88; /* ESPERAR LAUARA FOCUS ESTILOS*/
+  --bs-form-select-bg-img: url('../../../../assets/icons/select-icon-up.svg');
+  box-shadow: none;
+}
+
+.form-select{
+  --bs-form-select-bg-img: url('../../../../assets/icons/select-icon-down.svg');
+}
+
 

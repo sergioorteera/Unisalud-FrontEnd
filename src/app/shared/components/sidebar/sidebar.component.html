@@ -14,85 +14,121 @@
   </div>
 
   <ul class="sidebar-nav">
-
     <li class="sidebar-item">
 
-      <a href="#" class="sidebar-link menu-one text-nowrap collapse" data-bs-toggle="collapse"
-        data-bs-target="#assurance" aria-controls="assurance" aria-expanded="false">
-
+      <a class="sidebar-link menu-one text-nowrap collapse">
         <img [src]="'./assets/icons/aseguramiento.svg'" alt="Aseguramiento Icon">
-
         <span class="tittle-icon">Aseguramiento</span>
-
       </a>
 
-      <ul id="assurance" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
-
-        <!-- data-bs-toggle="collapse" permite que se despliegue el menú o no -->
-
+      <ul id="assurance" class="list-unstyled collapsed" data-bs-parent="#sidebar">
         <li class="sidebar-item">
 
-          <a href="#" class="sidebar-link collapse menu-two" data-bs-toggle="collapse" data-bs-target="#subAssurance"
-            aria-expanded="true" aria-controls="subAssurance">
+          <a href="#" class="sidebar-link collapse menu-two" (click)="toggleAffiliations()">
             Afiliaciones
           </a>
-          <ul id="subAssurance" class="sidebar-dropdown list-unstyled collapse">
+
+          <ul id="affiliations" class="sidebar-dropdown list-unstyled" [ngClass]="{ 'expanded': !isAffiliationsCollapsed }">
             <li class="sidebar-item">
-              <a href="#" class="sidebar-link menu-three">Solicitud de afiliación</a>
+              <a href="#" class="sidebar-link menu-three" (click)="selectOption('Solicitud de afiliación')"
+                [ngClass]="{ 'selected': selectedOption === 'Solicitud de afiliación' }">
+                Solicitud de afiliación
+              </a>
             </li>
             <li class="sidebar-item">
-              <a href="#" class="sidebar-link menu-three">Gestión de grupo familiar</a>
+              <a href="#" class="sidebar-link menu-three" (click)="selectOption('Gestión de grupo familiar')"
+                [ngClass]="{ 'selected': selectedOption === 'Gestión de grupo familiar' }">
+                Gestión de grupo familiar
+              </a>
             </li>
             <li class="sidebar-item">
-              <a href="#" class="sidebar-link menu-three">Solicitudes por revisar</a>
+              <a href="#" class="sidebar-link menu-three" (click)="selectOption('Solicitudes por revisar')"
+                [ngClass]="{ 'selected': selectedOption === 'Solicitudes por revisar' }">
+                Solicitudes por revisar
+              </a>
             </li>
             <li class="sidebar-item">
-              <a routerLink="/aseguramiento/form-area-afiliaciones" class="sidebar-link menu-three">Solicitud de
-                afiliación</a>
+              <a href="#" class="sidebar-link menu-three" (click)="selectOption('Consultar afiliaciones')"
+                [ngClass]="{ 'selected': selectedOption === 'Consultar afiliaciones' }">
+                Consultar afiliaciones</a>
             </li>
           </ul>
+
         </li>
 
-      </ul>
+        <li class="sidebar-item">
 
-    </li>
+          <a href="#" class="sidebar-link collapse menu-two" (click)="toggleDataUpdate()">
+            Actualización de datos
+          </a>
 
-    <li class="sidebar-item">
+          <ul id="dataUpdate" class="sidebar-dropdown list-unstyled" [ngClass]="{ 'expanded': !isDataUpdateCollapsed }">
+            <li class="sidebar-item">
+              <a href="#" class="sidebar-link menu-three" (click)="selectOption('Solicitud de actualización')"
+                [ngClass]="{ 'selected': selectedOption === 'Solicitud de actualización' }">
+                Solicitud de actualización
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a href="#" class="sidebar-link menu-three" (click)="selectOption('Solicitudes por revisar')"
+                [ngClass]="{ 'selected': selectedOption === 'Solicitudes por revisar' }">
+                Solicitudes por revisar
+              </a>
+            </li>
+          </ul>
 
-      <a href="#" class="sidebar-link menu-one text-nowrap collapse" data-bs-toggle="collapse" data-bs-target="#hiring"
-        aria-controls="hiring" aria-expanded="false">
-
-        <img [src]="'./assets/icons/aseguramiento.svg'" alt="Contratacion Icon">
-
-        <span class="tittle-icon">Contratación</span>
-
-      </a>
-
-      <ul id="hiring" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
-
-        <!-- data-bs-toggle="collapse" permite que se despliegue el menú o no -->
+        </li>
 
         <li class="sidebar-item">
 
-          <a href="#" class="sidebar-link collapse menu-two" data-bs-toggle="collapse" data-bs-target="#SubHiring"
-            aria-expanded="false" aria-controls="SubHiring">
-            Afiliaciones
+          <a href="#" class="sidebar-link collapse menu-two" (click)="toggleWithdrawals()">
+            Retiros
           </a>
-          <ul id="SubHiring" class="sidebar-dropdown list-unstyled collapse">
+
+          <ul id="Withdrawals" class="sidebar-dropdown list-unstyled" [ngClass]="{ 'expanded': !isWithdrawalsCollapsed }">
             <li class="sidebar-item">
-              <a href="#" class="sidebar-link menu-three">Solicitud de afiliación</a>
+              <a href="#" class="sidebar-link menu-three" (click)="selectOption('Solicitud de retiro')"
+                [ngClass]="{ 'selected': selectedOption === 'Solicitud de retiro' }">
+                Solicitud de retiro
+              </a>
             </li>
             <li class="sidebar-item">
-              <a href="#" class="sidebar-link menu-three">Gestión de grupo familiar</a>
-            </li>
-            <li class="sidebar-item">
-              <a href="#" class="sidebar-link menu-three">Solicitudes por revisar</a>
-            </li>
-            <li class="sidebar-item">
-              <a routerLink="/aseguramiento/form-area-afiliaciones" class="sidebar-link menu-three">Solicitud de
-                afiliación</a>
+              <a href="#" class="sidebar-link menu-three" (click)="selectOption('Solicitudes por revisar')"
+                [ngClass]="{ 'selected': selectedOption === 'Solicitudes por revisar' }">
+                Solicitudes por revisar
+              </a>
             </li>
           </ul>
+
+        </li>
+
+        <li class="sidebar-item">
+
+          <a href="#" class="sidebar-link collapse menu-two" (click)="togglePayroll()">
+            Nómina
+          </a>
+
+          <ul id="Payroll" class="sidebar-dropdown list-unstyled" [ngClass]="{ 'expanded': !isPayrollCollapsed }">
+            <li class="sidebar-item">
+              <a href="#" class="sidebar-link menu-three" (click)="selectOption('Actualizar nómina manual')"
+                [ngClass]="{ 'selected': selectedOption === 'Actualizar nómina manual' }">
+                Actualizar nómina manual
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a href="#" class="sidebar-link menu-three" (click)="selectOption('Cargar nómina')"
+                [ngClass]="{ 'selected': selectedOption === 'Cargar nómina' }">
+                Cargar nómina
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a href="#" class="sidebar-link menu-three" (click)="selectOption('Consultar nómina')"
+                [ngClass]="{ 'selected': selectedOption === 'Consultar nómina' }">
+                Consultar nómina
+              </a>
+            </li>
+          </ul>
+
         </li>
 
       </ul>

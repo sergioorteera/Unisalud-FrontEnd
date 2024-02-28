@@ -96,15 +96,7 @@ li {
   height: auto;
 }
 
-.selected-item {
-  background-color: rgb(251, 248, 255, 20%);
-}
-
 #sidebar .sidebar-dropdown .sidebar-link:hover {
-  background-color: var(--blue-60);
-}
-
-.sidebar-link:hover {
   background-color: var(--blue-60);
 }
 
@@ -116,4 +108,20 @@ li {
 
 .tittle-icon {
   padding-left: 18px;
+}
+
+.selected {
+  background-color: var(--blue-ligth);
+}
+
+/* Estilos para el despliegue suave con transición */
+.sidebar-dropdown {
+  max-height: 0;
+  overflow: hidden;
+  transition: all .3s ease-out; /* Ajusta la duración y tipo de transición según tus preferencias */
+}
+
+.sidebar-dropdown.expanded {
+  max-height: 500px; /* Ajusta según la altura máxima que desees para el despliegue */
+  transition: max-height 0.6s linear;
 }
