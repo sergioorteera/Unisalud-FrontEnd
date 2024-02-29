@@ -1,0 +1,23 @@
+.form-floating {
+  position: relative;
+}
+
+.form-floating label {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  pointer-events: none;
+  transition: none;
+}
+
+.form-floating input {
+  padding-top: 1.5rem; /* Ajusta el espacio para que el label no se solape con el texto del input */
+}
+
+.form-floating input:focus + label,
+.form-floating input:not(:placeholder-shown) + label {
+  top: 0;
+  transform: translateY(0);
+  font-size: 0.75rem; /* Ajusta el tamaño del label cuando el input tiene foco o contiene texto */
+}

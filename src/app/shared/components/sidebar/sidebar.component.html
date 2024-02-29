@@ -30,7 +30,7 @@
 
           <ul id="affiliations" class="sidebar-dropdown list-unstyled" [ngClass]="{ 'expanded': !isAffiliationsCollapsed }">
             <li class="sidebar-item">
-              <a href="#" class="sidebar-link menu-three" (click)="selectOption('Solicitud de afiliación')"
+              <a [routerLink]="['/membership-aplication']" routerLinkActive="router-link-active"  class="sidebar-link menu-three" (click)="selectOption('Solicitud de afiliación')"
                 [ngClass]="{ 'selected': selectedOption === 'Solicitud de afiliación' }">
                 Solicitud de afiliación
               </a>
