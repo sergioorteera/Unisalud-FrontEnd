@@ -1,23 +1,21 @@
-.form-floating {
-  position: relative;
+
+.nav-item{
+  font-family: "FiraSans-SemiBold";
+  font-size: 14px;
 }
 
-.form-floating label {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 0;
-  pointer-events: none;
-  transition: none;
+.nav-tabs{
+  background-color: var(--gray-background);
 }
 
-.form-floating input {
-  padding-top: 1.5rem; /* Ajusta el espacio para que el label no se solape con el texto del input */
+.nav-tabs .nav-link {
+  color: var(--blue);
+  display: flex;
+  background-color: var(--white);
+  padding-left: 31px;
+  padding-right: 31px;
+  height: 45px;
+  align-items: center;
 }
 
-.form-floating input:focus + label,
-.form-floating input:not(:placeholder-shown) + label {
-  top: 0;
-  transform: translateY(0);
-  font-size: 0.75rem; /* Ajusta el tamaño del label cuando el input tiene foco o contiene texto */
-}
+

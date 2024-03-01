@@ -1,4 +1,54 @@
-<div class="form-floating py-3">
-  <input type="email" class="form-control" id="floatingInputGrid" placeholder="name@example.com" value="mdo@example.com">
-  <label for="floatingInputGrid">Email address</label>
-</div>
+<section class="container-fluid mt-5">
+
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
+
+    <li class="nav-item" role="presentation">
+      <a href="#membership-area-data" class="nav-item nav-link link active" id="membership-area-data-tab"
+        data-bs-toggle="tab" role="tab" aria-controls="membership-area-data" aria-selected="true">
+        <span>Datos del área de afiliaciones</span>
+      </a>
+    </li>
+
+    <li class="nav-item" role="presentation">
+      <a href="#contributor-data" class="nav-item nav-link link separador-nave" id="contributor-data-tab"
+        data-bs-toggle="tab" role="tab" aria-controls="contributor-data" aria-selected="true">
+        <span>Datos del cotizante</span>
+      </a>
+    </li>
+
+    <li class="nav-item" role="presentation">
+      <a href="#family-group-management" class="nav-item nav-link link separador-nave" id="family-group-management-tab"
+        data-bs-toggle="tab" role="tab" aria-controls="family-group-management" aria-selected="true">
+        <span>Gestión grupo familiar</span>
+      </a>
+    </li>
+
+    <li class="nav-item" role="presentation">
+      <a href="#employer-data" class="nav-item nav-link link separador-nave" id="employer-data-tab"
+        data-bs-toggle="tab" role="tab" aria-controls="employer-data" aria-selected="true">
+        <span>Datos del empleador</span>
+      </a>
+    </li>
+
+  </ul>
+
+  <div class="tab-content" id="myTabContent">
+
+    <div class="tab-pane fade show active" id="membership-area-data" role="tabpanel"
+      aria-labelledby="membership-area-data-tab">
+      <app-membership-area-data></app-membership-area-data>
+    </div>
+    <div class="tab-pane fade show" id="contributor-data" role="tabpanel" aria-labelledby="contributor-data-tab">
+      <app-contributor-data></app-contributor-data>
+    </div>
+    <div class="tab-pane fade show" id="family-group-management" role="tabpanel" aria-labelledby="family-group-management-tab">
+      <app-family-group-management></app-family-group-management>
+    </div>
+    <div class="tab-pane fade show" id="employer-data" role="tabpanel" aria-labelledby="employer-data-tab">
+      <app-employer-data></app-employer-data>
+    </div>
+
+  </div>
+
+
+</section>
