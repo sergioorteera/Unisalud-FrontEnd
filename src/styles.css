@@ -1,21 +1,12 @@
 
-
 /* colors */
-
 :root {
-
   /*AZUL: Color institucional primario: */
-
   --blue: #000066; /* Color primario */
-
   /*ROJO: Color institucional secundario:*/
-
   --red-light: #DB141C; /* Color secundario */
-
   /*OTROS COLORES*/
-
   --gray-background: #E5E1E5;
-
   --white: #FFFFFF; /* Blanco */
   --neutral-95: #F2EFFA; /* Neutral 95 */
   --neutral-90: #E4E1EC; /* Neutral 90 */
@@ -32,32 +23,28 @@
   --yellow-color-dos: #FFB000; /* Amarillo color dos */
   --green-color-tres: #5BAE40; /* Verde color tres */
   --green-uno: #EEFFE9; /* Verde 1 */
-
 }
 
 /* Fonts */
-
 @font-face {
   font-family: "FiraSans-Black";
   src: url('./assets/fonts/FiraSans-Black.ttf') format("truetype");
 }
-
 @font-face {
   font-family: "FiraSans-Bold";
   src: url('./assets/fonts/FiraSans-Bold.ttf') format("truetype");
 }
-
 @font-face {
   font-family: "FiraSans-Light";
   src: url('./assets/fonts/FiraSans-Light.ttf') format("truetype");
 }
-
 @font-face {
   font-family: "FiraSans-Regular";
   src: url('./assets/fonts/FiraSans-Regular.ttf') format("truetype");
 }
-
 @font-face {
   font-family: "FiraSans-SemiBold";
   src: url('./assets/fonts/FiraSans-SemiBold.ttf') format("truetype");
 }
+
+/* Custom inputs */

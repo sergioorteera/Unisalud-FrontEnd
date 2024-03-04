@@ -8,9 +8,11 @@ footer span{
 }
 
 .hr-container {
-  width: 65%;
+  width: 1001px;
+  padding: 0px;
 }
 
 .hr-line {
   width: 100%;
+
 }

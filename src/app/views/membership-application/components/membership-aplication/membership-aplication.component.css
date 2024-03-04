@@ -1,4 +1,7 @@
+.container-fluid{
+  padding-left: 0px;
 
+}
 .nav-item{
   font-family: "FiraSans-SemiBold";
   font-size: 14px;
@@ -6,16 +9,42 @@
 
 .nav-tabs{
   background-color: var(--gray-background);
+  width: 1000px;
 }
 
 .nav-tabs .nav-link {
   color: var(--blue);
-  display: flex;
   background-color: var(--white);
-  padding-left: 31px;
-  padding-right: 31px;
   height: 45px;
-  align-items: center;
+  width: 250px;
+  text-align: center;
+  border-color: var(--white);
+  padding-top: 10px;
 }
 
+.navOne{
+  border-top-left-radius: 8px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+.navTwo{
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+.navThree{
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+.navFour{
+  border-top-left-radius: 0px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
 
