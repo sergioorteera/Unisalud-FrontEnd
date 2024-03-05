@@ -1,31 +1,32 @@
 <section class="container-fluid">
 
-  <ul class="nav nav-tabs"  id="myTab" role="tablist">
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
 
     <li class="nav-item" role="presentation">
-      <a href="#membership-area-data" class="nav-item nav-link link active navOne" id="membership-area-data-tab"
-        data-bs-toggle="tab" role="tab" aria-controls="membership-area-data" aria-selected="true">
+      <a href="#membership-area-data" class="nav-item nav-link link navOne disabled" id="membership-area-data-tab"
+        data-bs-toggle="tab" role="tab" aria-controls="membership-area-data" aria-selected="true"
+        [class.active-tab]="getTabClass(0)">
         <span>Datos del área de afiliaciones</span>
       </a>
     </li>
-
     <li class="nav-item" role="presentation">
-      <a href="#contributor-data" class="nav-item nav-link link navTwo" id="contributor-data-tab"
-        data-bs-toggle="tab" role="tab" aria-controls="contributor-data" aria-selected="true">
+      <a href="#contributor-data" class="nav-item nav-link link navTwo disabled" id="contributor-data-tab"
+        data-bs-toggle="tab" role="tab" aria-controls="contributor-data" aria-selected="true"
+        [class.active-tab]="getTabClass(1)">
         <span>Datos del cotizante</span>
       </a>
     </li>
-
     <li class="nav-item" role="presentation">
-      <a href="#family-group-management" class="nav-item nav-link link navThree" id="family-group-management-tab"
-        data-bs-toggle="tab" role="tab" aria-controls="family-group-management" aria-selected="true">
+      <a href="#family-group-management" class="nav-item nav-link link navThree disabled"
+        id="family-group-management-tab" data-bs-toggle="tab" role="tab" aria-controls="family-group-management"
+        aria-selected="true" [class.active-tab]="getTabClass(2)">
         <span>Gestión grupo familiar</span>
       </a>
     </li>
-
     <li class="nav-item" role="presentation">
-      <a href="#employer-data" class="nav-item nav-link link navFour" id="employer-data-tab"
-        data-bs-toggle="tab" role="tab" aria-controls="employer-data" aria-selected="true">
+      <a href="#employer-data" class="nav-item nav-link link navFour disabled" id="employer-data-tab"
+        data-bs-toggle="tab" role="tab" aria-controls="employer-data" aria-selected="true"
+        [class.active-tab]="getTabClass(3)">
         <span>Datos del empleador</span>
       </a>
     </li>
@@ -34,21 +35,30 @@
 
   <div class="tab-content" id="myTabContent">
 
-    <div class="tab-pane fade show active" id="membership-area-data" role="tabpanel"
+    <div *ngIf="activeTabIndex === 0" id="membership-area-data" role="tabpanel"
       aria-labelledby="membership-area-data-tab">
       <app-membership-area-data></app-membership-area-data>
     </div>
-    <div class="tab-pane fade show" id="contributor-data" role="tabpanel" aria-labelledby="contributor-data-tab">
+    <div *ngIf="activeTabIndex === 1" id="contributor-data" role="tabpanel" aria-labelledby="contributor-data-tab">
       <app-contributor-data></app-contributor-data>
     </div>
-    <div class="tab-pane fade show" id="family-group-management" role="tabpanel" aria-labelledby="family-group-management-tab">
+    <div *ngIf="activeTabIndex === 2" id="family-group-management" role="tabpanel"
+      aria-labelledby="family-group-management-tab">
       <app-family-group-management></app-family-group-management>
     </div>
-    <div class="tab-pane fade show" id="employer-data" role="tabpanel" aria-labelledby="employer-data-tab">
+    <div *ngIf="activeTabIndex === 3" id="employer-data" role="tabpanel" aria-labelledby="employer-data-tab">
       <app-employer-data></app-employer-data>
     </div>
 
+
+    <div class="button-container">
+      <button (click)="goBack()" [disabled]="isFirstTab()" type="button" class="btn-custom">Atrás</button>
+      <button (click)="goForward()" [disabled]="isLastTab()" type="button" class="btn-custom">Siguiente</button>
+    </div>
+
   </div>
+
+
 
 
 </section>
