@@ -1,15 +1,15 @@
 .container-fluid{
   padding-left: 0px;
-
-}
-.nav-item{
-  font-family: "FiraSans-SemiBold";
-  font-size: 14px;
 }
 
 .nav-tabs{
   background-color: var(--gray-background);
-  width: 1000px;
+  width: 1005px;
+}
+
+.nav-item{
+  font-family: "FiraSans-SemiBold";
+  font-size: 14px;
 }
 
 .nav-tabs .nav-link {
@@ -18,11 +18,42 @@
   height: 45px;
   width: 250px;
   text-align: center;
-  border-color: var(--white);
   padding-top: 10px;
 }
 
+a{
+  height: max-content;
+}
+
+a:hover ,
+a.active ,
+a:focus {
+  position: relative;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 185px;
+  height: 2px;
+  background-color: #ff0000;
+  transform: translateX(-50%);
+}
+
+
+.nav-link.active {
+  border-top: 1px solid var(--white);
+  border-left: 1px solid var(--white);
+  border-right: 1px solid var(--white);
+  border-bottom: 1px solid var(--white);
+  /* border-bottom: 2px solid #ff0000; */
+}
+
+
 .navOne{
+  margin-right: 1px;
   border-top-left-radius: 8px;
   border-top-right-radius: 0px;
   border-bottom-right-radius: 0px;
@@ -30,12 +61,14 @@
 }
 
 .navTwo{
+  margin-right: 1px;
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
   border-bottom-right-radius: 0px;
   border-bottom-left-radius: 0px;
 }
 .navThree{
+  margin-right: 1px;
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
   border-bottom-right-radius: 0px;
@@ -48,3 +81,20 @@
   border-bottom-left-radius: 0px;
 }
 
+
+
+
+/* .nav-tabs:first-child{
+  border-top-left-radius: 8px !important;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+.nav-item:nth-child(){
+  background-color: red;
+}
+
+.nav-tabs:last-child{
+  border-top-right-radius: 8px;
+} */
