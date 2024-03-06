@@ -16,10 +16,18 @@ export class MembershipAplicationComponent {
   }
 
   goForward() {
-    if (this.activeTabIndex < 3) {
+    if (this.isLastTab()) {
+      console.log('Guardar datos');
+    }else if (this.activeTabIndex < 3) {
       this.activeTabIndex++;
     }
+
   }
+
+  getButtonText() {
+    return this.isLastTab() ? 'Guardar' : 'Siguiente';
+  }
+
 
   isFirstTab() {
     return this.activeTabIndex === 0;
@@ -31,6 +39,10 @@ export class MembershipAplicationComponent {
 
   getTabClass(index: number): string {
     return this.activeTabIndex === index ? 'active-tab' : '';
+  }
+
+  isBackButtonInFirstTab() {
+    return this.activeTabIndex === 0;
   }
 
 }

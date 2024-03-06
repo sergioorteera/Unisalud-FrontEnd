@@ -1,9 +1,6 @@
 .container-fluid{
   padding-left: 0px;
-}
-
-.container-fluid div{
-  border: 20px;
+  padding-right: 0px;
 }
 
 .nav-tabs{
@@ -72,8 +69,8 @@
   content: "";
   position: absolute;
   bottom: 0;
-  left: 50px;
-  width: 150px;
+  left: 32px;
+  width: 185px;
   border-bottom: 2px solid red;
 }
 
@@ -86,16 +83,7 @@
   border-bottom-right-radius: 14px ;
 }
 
-.btn-custom{
-  font-family: "FiraSans-SemiBold";
-  font-size: 16px;
-  color: var(--white);
-  background-color: var(--blue);
-  border: none;
-  border-radius: 100px;
-  width: 120px;
-  height: 40px;
-}
+
 
 /* .nav-tabs:first-child{
   border-top-left-radius: 8px !important;

@@ -50,15 +50,17 @@
       <app-employer-data></app-employer-data>
     </div>
 
-
-    <div class="button-container">
-      <button (click)="goBack()" [disabled]="isFirstTab()" type="button" class="btn-custom">Atrás</button>
-      <button (click)="goForward()" [disabled]="isLastTab()" type="button" class="btn-custom">Siguiente</button>
-    </div>
-
   </div>
 
-
-
+  <div class="button-container">
+    <button (click)="goBack()" [disabled]="isFirstTab()" type="button"
+      [class.btn-custom-normal]="!isBackButtonInFirstTab()" [class.btn-custom-disabled]="isBackButtonInFirstTab()">
+      Atrás
+    </button>
+    <button type="button" class="btn-custom-normal mx-3">Cancelar</button>
+    <button (click)="goForward()" [disabled]="isLastTab()" type="button" class="btn-custom-normal">
+      {{ getButtonText()}}
+    </button>
+  </div>
 
 </section>

@@ -47,4 +47,31 @@
   src: url('./assets/fonts/FiraSans-SemiBold.ttf') format("truetype");
 }
 
-/* Custom inputs */
+/* BUTTON CUSTOM */
+
+/* Button normal */
+.btn-custom-normal {
+  font-family: "FiraSans-SemiBold";
+  font-size: 16px;
+  color: var(--white);
+  background-color: var(--blue);
+  border: none;
+  border-radius: 100px;
+  width: 120px;
+  height: 40px;
+}
+.btn-custom-normal:hover {
+  background-color:  var(--blue-ligth);
+}
+
+/* Button disabled */
+.btn-custom-disabled {
+  font-family: "FiraSans-SemiBold";
+  font-size: 16px;
+  color: var(--neutral-60);
+  background-color: var(--neutral-95);
+  border: none;
+  border-radius: 100px;
+  width: 120px;
+  height: 40px;
+}
