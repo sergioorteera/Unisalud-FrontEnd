@@ -18,37 +18,37 @@
 
       <a class="sidebar-link menu-one text-nowrap collapse">
         <img [src]="'./assets/icons/aseguramiento.svg'" alt="Aseguramiento Icon">
-        <span class="tittle-icon">Aseguramiento</span>
+        <span class="text-body-heavy mx-3">Aseguramiento</span>
       </a>
 
       <ul id="assurance" class="list-unstyled collapsed" data-bs-parent="#sidebar">
         <li class="sidebar-item">
 
-          <a href="#" class="sidebar-link collapse menu-two" (click)="toggleAffiliations()">
+          <a href="#" class="sidebar-link collapse text-body-heavy menu-two" (click)="toggleAffiliations()">
             Afiliaciones
           </a>
 
           <ul id="affiliations" class="sidebar-dropdown list-unstyled" [ngClass]="{ 'expanded': !isAffiliationsCollapsed }">
             <li class="sidebar-item">
-              <a [routerLink]="['/membership-aplication']" routerLinkActive="router-link-active"  class="sidebar-link menu-three" (click)="selectOption('Solicitud de afiliación')"
+              <a [routerLink]="['/membership-aplication']" routerLinkActive="router-link-active"  class="sidebar-link text-body-small-r menu-three" (click)="selectOption('Solicitud de afiliación')"
                 [ngClass]="{ 'selected': selectedOption === 'Solicitud de afiliación' }">
                 Solicitud de afiliación
               </a>
             </li>
             <li class="sidebar-item">
-              <a href="#" class="sidebar-link menu-three" (click)="selectOption('Gestión de grupo familiar')"
+              <a href="#" class="sidebar-link menu-three text-body-small-r" (click)="selectOption('Gestión de grupo familiar')"
                 [ngClass]="{ 'selected': selectedOption === 'Gestión de grupo familiar' }">
                 Gestión de grupo familiar
               </a>
             </li>
             <li class="sidebar-item">
-              <a href="#" class="sidebar-link menu-three" (click)="selectOption('Solicitudes por revisar')"
+              <a href="#" class="sidebar-link menu-three text-body-small-r" (click)="selectOption('Solicitudes por revisar')"
                 [ngClass]="{ 'selected': selectedOption === 'Solicitudes por revisar' }">
                 Solicitudes por revisar
               </a>
             </li>
             <li class="sidebar-item">
-              <a href="#" class="sidebar-link menu-three" (click)="selectOption('Consultar afiliaciones')"
+              <a href="#" class="sidebar-link menu-three text-body-small-r" (click)="selectOption('Consultar afiliaciones')"
                 [ngClass]="{ 'selected': selectedOption === 'Consultar afiliaciones' }">
                 Consultar afiliaciones</a>
             </li>
@@ -58,19 +58,19 @@
 
         <li class="sidebar-item">
 
-          <a href="#" class="sidebar-link collapse menu-two" (click)="toggleDataUpdate()">
+          <a href="#" class="sidebar-link collapse text-body-heavy menu-two" (click)="toggleDataUpdate()">
             Actualización de datos
           </a>
 
           <ul id="dataUpdate" class="sidebar-dropdown list-unstyled" [ngClass]="{ 'expanded': !isDataUpdateCollapsed }">
             <li class="sidebar-item">
-              <a href="#" class="sidebar-link menu-three" (click)="selectOption('Solicitud de actualización')"
+              <a href="#" class="sidebar-link menu-three text-body-small-r" (click)="selectOption('Solicitud de actualización')"
                 [ngClass]="{ 'selected': selectedOption === 'Solicitud de actualización' }">
                 Solicitud de actualización
               </a>
             </li>
             <li class="sidebar-item">
-              <a href="#" class="sidebar-link menu-three" (click)="selectOption('Solicitudes por revisar')"
+              <a href="#" class="sidebar-link menu-three text-body-small-r" (click)="selectOption('Solicitudes por revisar')"
                 [ngClass]="{ 'selected': selectedOption === 'Solicitudes por revisar' }">
                 Solicitudes por revisar
               </a>
@@ -81,19 +81,19 @@
 
         <li class="sidebar-item">
 
-          <a href="#" class="sidebar-link collapse menu-two" (click)="toggleWithdrawals()">
+          <a href="#" class="sidebar-link collapse text-body-heavy menu-two" (click)="toggleWithdrawals()">
             Retiros
           </a>
 
           <ul id="Withdrawals" class="sidebar-dropdown list-unstyled" [ngClass]="{ 'expanded': !isWithdrawalsCollapsed }">
             <li class="sidebar-item">
-              <a href="#" class="sidebar-link menu-three" (click)="selectOption('Solicitud de retiro')"
+              <a href="#" class="sidebar-link menu-three text-body-small-r" (click)="selectOption('Solicitud de retiro')"
                 [ngClass]="{ 'selected': selectedOption === 'Solicitud de retiro' }">
                 Solicitud de retiro
               </a>
             </li>
             <li class="sidebar-item">
-              <a href="#" class="sidebar-link menu-three" (click)="selectOption('Solicitudes por revisar')"
+              <a href="#" class="sidebar-link menu-three text-body-small-r" (click)="selectOption('Solicitudes por revisar')"
                 [ngClass]="{ 'selected': selectedOption === 'Solicitudes por revisar' }">
                 Solicitudes por revisar
               </a>
@@ -104,25 +104,25 @@
 
         <li class="sidebar-item">
 
-          <a href="#" class="sidebar-link collapse menu-two" (click)="togglePayroll()">
+          <a href="#" class="sidebar-link collapse text-body-heavy menu-two" (click)="togglePayroll()">
             Nómina
           </a>
 
           <ul id="Payroll" class="sidebar-dropdown list-unstyled" [ngClass]="{ 'expanded': !isPayrollCollapsed }">
             <li class="sidebar-item">
-              <a href="#" class="sidebar-link menu-three" (click)="selectOption('Actualizar nómina manual')"
+              <a href="#" class="sidebar-link menu-three text-body-small-r" (click)="selectOption('Actualizar nómina manual')"
                 [ngClass]="{ 'selected': selectedOption === 'Actualizar nómina manual' }">
                 Actualizar nómina manual
               </a>
             </li>
             <li class="sidebar-item">
-              <a href="#" class="sidebar-link menu-three" (click)="selectOption('Cargar nómina')"
+              <a href="#" class="sidebar-link menu-three text-body-small-r" (click)="selectOption('Cargar nómina')"
                 [ngClass]="{ 'selected': selectedOption === 'Cargar nómina' }">
                 Cargar nómina
               </a>
             </li>
             <li class="sidebar-item">
-              <a href="#" class="sidebar-link menu-three" (click)="selectOption('Consultar nómina')"
+              <a href="#" class="sidebar-link menu-three text-body-small-r" (click)="selectOption('Consultar nómina')"
                 [ngClass]="{ 'selected': selectedOption === 'Consultar nómina' }">
                 Consultar nómina
               </a>

@@ -6,28 +6,28 @@
       <a href="#membership-area-data" class="nav-item nav-link link navOne disabled" id="membership-area-data-tab"
         data-bs-toggle="tab" role="tab" aria-controls="membership-area-data" aria-selected="true"
         [class.active-tab]="getTabClass(0)">
-        <span>Datos del área de afiliaciones</span>
+        <span class="text-body-small-sb">Datos del área de afiliaciones</span>
       </a>
     </li>
     <li class="nav-item" role="presentation">
-      <a href="#contributor-data" class="nav-item nav-link link navTwo disabled" id="contributor-data-tab"
+      <a href="#contributor-data" class="nav-item nav-link link navTwo text-body-small-sb disabled" id="contributor-data-tab"
         data-bs-toggle="tab" role="tab" aria-controls="contributor-data" aria-selected="true"
         [class.active-tab]="getTabClass(1)">
-        <span>Datos del cotizante</span>
+        <span class="text-body-small-sb">Datos del cotizante</span>
       </a>
     </li>
     <li class="nav-item" role="presentation">
-      <a href="#family-group-management" class="nav-item nav-link link navThree disabled"
+      <a href="#family-group-management" class="nav-item nav-link link navThree text-body-small-sb disabled"
         id="family-group-management-tab" data-bs-toggle="tab" role="tab" aria-controls="family-group-management"
         aria-selected="true" [class.active-tab]="getTabClass(2)">
-        <span>Gestión grupo familiar</span>
+        <span class="text-body-small-sb">Gestión grupo familiar</span>
       </a>
     </li>
     <li class="nav-item" role="presentation">
-      <a href="#employer-data" class="nav-item nav-link link navFour disabled" id="employer-data-tab"
+      <a href="#employer-data" class="nav-item nav-link link navFour text-body-small-sb disabled" id="employer-data-tab"
         data-bs-toggle="tab" role="tab" aria-controls="employer-data" aria-selected="true"
         [class.active-tab]="getTabClass(3)">
-        <span>Datos del empleador</span>
+        <span class="text-body-small-sb">Datos del empleador</span>
       </a>
     </li>
 
@@ -53,14 +53,15 @@
   </div>
 
   <div class="button-container">
-    <button (click)="goBack()" [disabled]="isFirstTab()" type="button"
+    <button (click)="goBack()" [disabled]="isFirstTab()" type="button" class="text-body-heavy"
       [class.btn-custom-normal]="!isBackButtonInFirstTab()" [class.btn-custom-disabled]="isBackButtonInFirstTab()">
       Atrás
     </button>
-    <button type="button" class="btn-custom-normal mx-3">Cancelar</button>
-    <button (click)="goForward()" [disabled]="isLastTab()" type="button" class="btn-custom-normal">
+    <button type="button" class="btn-custom-normal mx-3 text-body-heavy">Cancelar</button>
+    <button (click)="goForward()" [disabled]="isLastTab()" type="button" class="btn-custom-normal text-body-heavy">
       {{ getButtonText()}}
     </button>
+
   </div>
 
 </section>

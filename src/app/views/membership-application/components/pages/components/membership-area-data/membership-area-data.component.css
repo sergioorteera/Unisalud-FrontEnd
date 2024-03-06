@@ -7,34 +7,13 @@
   border-top-right-radius: 8px;
 }
 
-.titleForm{
-  font-family: "FiraSans-Bold";
-  font-size: 32px;
-  color: var(--blue);
+.title-page-form {
   padding-bottom: 50px;
 }
 
-
-/*Forms custom*/
-.custom-forms-container {
-  position: relative;
-  height: 63px;
-  width: 303px;
-}
-.title-forms {
-  position: absolute;
-  overflow: hidden;
-  white-space: nowrap;
-  font-family: "FiraSans-SemiBold";
-  font-size: 14px;
-  color: var(--neutral-70);
-  padding-top: 11px;
-  padding-left: 30px;
-  padding-right: 30px;
-}
-
 /*Inpunt custom*/
-.form-control {
+
+.form-control-custom {
   font-family: "FiraSans-Regular";
   font-size: 16px;
   color: var(--blue);
@@ -48,16 +27,17 @@
   width: 100%;
   height: 100%;
 }
-.form-control::placeholder {
+
+.form-control-custom::placeholder {
   color: var(--blue);
 }
-.form-control:focus {
+.form-control-custom:focus {
   border-color: var(--neutral-70);
   box-shadow: none;
 }
 
 /*select custom*/
-.form-select {
+.form-select-custom {
   font-family: "FiraSans-Regular";
   font-size: 16px;
   color: var(--blue);
@@ -72,13 +52,13 @@
   height: 100%;
   --bs-form-select-bg-img: url('../../../../../../../assets/icons/select-icon.svg');
 }
-.form-select::placeholder {
+.form-select-custom::placeholder {
   color: var(--blue);
 }
-.form-select::placeholder {
+.form-select-custom::placeholder {
   color: var(--blue);
 }
-.form-select:focus {
+.form-select-custom:focus {
   border-color: #949494;
   box-shadow: none;
 }

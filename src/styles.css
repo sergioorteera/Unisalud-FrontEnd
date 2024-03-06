@@ -47,7 +47,58 @@
   src: url('./assets/fonts/FiraSans-SemiBold.ttf') format("truetype");
 }
 
-/* BUTTON CUSTOM */
+/* ------ TITLES AND TEXTS ------- */
+
+/* titles */
+.tittle-one {
+  font-family: "FiraSans-Black";
+  font-size: 48px;
+  color: var(--blue);
+}
+.title-two {
+  font-family: "FiraSans-Bold";
+  font-size: 32px;
+  color: var(--blue);
+}
+.title-three {
+  font-family: "FiraSans-SemiBold";
+  font-size: 22px;
+  color: var(--blue);
+}
+.subtitle {
+  font-family: "FiraSans-Bold";
+  font-size: 18px;
+  color: var(--blue);
+}
+
+/* texts */
+.text-body {
+  font-family: "FiraSans-Regular";
+  font-size: 16px;
+  color: var(--blue);
+}
+.text-body-heavy {
+  font-family: "FiraSans-SemiBold";
+  font-size: 16px;
+  color: var(--blue);
+}
+.text-body-small-r {
+  font-family: "FiraSans-Regular";
+  font-size: 14px;
+  color: var(--blue);
+}
+.text-body-small-sb {
+  font-family: "FiraSans-SemiBold";
+  font-size: 14px;
+  color: var(--blue);
+}
+.text-body-extra-small {
+  font-family: "FiraSans-Light";
+  font-size: 12px;
+  color: var(--blue);
+}
+
+/* ------ BUTTON CUSTOM ------- */
 
 /* Button normal */
 .btn-custom-normal {
@@ -75,3 +126,53 @@
   width: 120px;
   height: 40px;
 }
+
+/* Button small normal */
+.btn-custom-normal-small {
+  font-family: "FiraSans-SemiBold";
+  font-size: 14px;
+  color: var(--white);
+  background-color: var(--blue);
+  border: none;
+  border-radius: 100px;
+  width: 100px;
+  height: 35px;
+}
+.btn-custom-normal-small:hover {
+  background-color:  var(--blue-ligth);
+}
+
+/* Button disabled small */
+.btn-custom-disabled-small {
+  font-family: "FiraSans-SemiBold";
+  font-size: 14px;
+  color: var(--neutral-60);
+  background-color: var(--neutral-95);
+  border: none;
+  border-radius: 100px;
+  width: 100px;
+  height: 35px;
+}
+
+
+/* ------ FORMS CUSTOM ------- */
+
+/*Forms custom*/
+
+.custom-forms-container {
+  position: relative;
+  height: 63px;
+  width: 303px;
+}
+
+.title-forms {
+  position: absolute;
+  overflow: hidden;
+  white-space: nowrap;
+  color: var(--neutral-70);
+  padding-top: 11px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+

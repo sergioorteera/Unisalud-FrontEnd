@@ -4,54 +4,60 @@
 
 }
 
+/*style logo sidebar*/
 .title-menu{
+  font-family: "myGaramond";
   font-size: 16px;
 }
-
 .image-menu{
   height: 56px;
   width: 36px;
 }
+.container-image {
+  align-items: center;
+  text-align: center;
+  display: flex;
+  padding-left: 40px;
+}
+/*-----------------*/
 
+/*style line red sidebar*/
 .container-line {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 24px;
 }
-
 .line {
   height: 2px;
   background-color: var(--red-light);
   width: 250px;
 }
-
-.container-image {
-  align-items: center;
-  color: #ffffff;
-  text-align: center;
-  display: flex;
-  padding-left: 40px;
+/*-----------------*/
+.text-body-heavy {
+  color: var(--neutral-95);
 }
 
-.tittle-menu{
-  font-family: "myGaramond";
-  font-size: 16px;
+.text-body-small-r {
+  color: var(--neutral-95);
 }
 
-li {
-  list-style: none;
+.sidebar-nav {
+  text-decoration: none;
+  padding-top: 32px;
+  padding-left: 0px;
+}
+
+a{
+  text-decoration: none;
 }
 
 .menu-one {
   padding-left: 38px;
   padding-right: 38px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 12px;
+  padding-bottom: 12px;
   height: 50px;
-  font-family: "FiraSans-SemiBold";
-  text-decoration: none;
-  font-size: 16px;
 }
 
 .menu-two {
@@ -60,9 +66,6 @@ li {
   padding-top: 12px;
   padding-bottom: 12px;
   height: 50px;
-  font-family: "FiraSans-Bold";
-  text-decoration: none;
-  font-size: 16px;
 }
 
 .menu-three {
@@ -71,11 +74,15 @@ li {
   padding-top: 9px;
   padding-bottom: 9px;
   height: 40px;
-  font-family: "FiraSans-Regular";
-  text-decoration: none;
-  font-size: 14px;
 }
 
+.menu-two:hover{
+  background-color: var(--blue-60);
+}
+
+.menu-three:hover{
+  background-color: var(--blue-60);
+}
 
 #sidebar {
   width: 323px;
@@ -85,27 +92,11 @@ li {
 }
 
 .sidebar-link {
-  color: var(--neutral-95);
   display: block;
 }
 
-.sidebar-item {
-  font-family: "FiraSans-Regular";
-  height: auto;
-}
-
-#sidebar .sidebar-dropdown .sidebar-link:hover {
-  background-color: var(--blue-60);
-}
-
-.sidebar-nav {
-  padding-top: 33px;
-  padding-left: 0px;
-
-}
-
-.tittle-icon {
-  padding-left: 18px;
+li {
+  list-style: none;
 }
 
 .selected {

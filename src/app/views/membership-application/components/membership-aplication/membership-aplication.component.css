@@ -8,11 +8,6 @@
   width: 1005px;
 }
 
-.nav-item{
-  font-family: "FiraSans-SemiBold";
-  font-size: 14px;
-}
-
 .nav-tabs .nav-link {
   color: var(--blue);
   background-color: var(--white);
