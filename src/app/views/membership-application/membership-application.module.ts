@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { MembershipApplicationRoutingModule } from './membership-application-routing.module';
 import { MembershipAplicationComponent } from './components/membership-aplication/membership-aplication.component';
@@ -7,6 +8,7 @@ import { MembershipAreaDataComponent } from './components/pages/components/membe
 import { ContributorDataComponent } from './components/pages/components/contributor-data/contributor-data.component';
 import { FamilyGroupManagementComponent } from './components/pages/components/family-group-management/family-group-management.component';
 import { EmployerDataComponent } from './components/pages/components/employer-data/employer-data.component';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 @NgModule({
@@ -19,7 +21,9 @@ import { EmployerDataComponent } from './components/pages/components/employer-da
   ],
   imports: [
     CommonModule,
-    MembershipApplicationRoutingModule
+    MembershipApplicationRoutingModule,
+    ReactiveFormsModule,
+    SharedModule,
   ]
 })
 export class MembershipApplicationModule { }
