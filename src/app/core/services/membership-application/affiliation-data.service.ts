@@ -7,7 +7,7 @@ import { SolicitudAfiliacionDetail, SolicitudAfiliacion } from '../../model/Soli
 @Injectable({
   providedIn: 'root'
 })
-export class AffiliationAreaDataService {
+export class AffiliationDataService {
 
   private apiUrl = environment.baseUrl;
 

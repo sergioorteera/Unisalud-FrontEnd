@@ -1,5 +1,5 @@
 <div class="container-fluid">
-  <form [formGroup]="affiliationAreaDataForm" (ngSubmit)="onSaveAffiliationAreaData()">
+  <form [formGroup]="membershipAreaDataForm" (ngSubmit)="onSaveMembershipAreaData()">
     <div class="row">
       <span class="title-page-form title-two">1. Información del área de afiliaciones de la unidad de salud</span>
     </div>
@@ -26,7 +26,7 @@
     </div>
 
     <div class="row">
-      <div class="col-12">
+      <div class="col-xl-6 col-lg-6 col-md-6 pe-xl-3">
         <div class="custom-textarea-container">
           <div class="title-forms text-body-small-sb">Observaciones</div>
           <textarea class="form-control form-control-custom text-body" placeholder="Digitar respuesta" formControlName="observaciones"></textarea>

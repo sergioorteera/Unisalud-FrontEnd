@@ -50,7 +50,7 @@
   border-color: var(--blue);
   width: 100%;
   height: 100%;
-  --bs-form-select-bg-img: url('../../../../../../../assets/icons/select-icon.svg');
+  /* --bs-form-select-bg-img: url('../../../../../../../assets/icons/select-icon.svg'); */
 }
 .form-select-custom::placeholder {
   color: var(--blue);

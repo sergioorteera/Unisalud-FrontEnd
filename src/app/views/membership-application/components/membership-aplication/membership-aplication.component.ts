@@ -28,7 +28,6 @@ export class MembershipAplicationComponent {
     return this.isLastTab() ? 'Guardar' : 'Siguiente';
   }
 
-
   isFirstTab() {
     return this.activeTabIndex === 0;
   }

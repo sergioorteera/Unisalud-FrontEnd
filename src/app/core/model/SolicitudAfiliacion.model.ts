@@ -62,9 +62,27 @@ export interface SolicitudAfiliacionDetail {
 export class SolicitudAfiliacion {
   [key: string]: any;
   constructor(
+    //AFILIACION COMPLETA
+  ) {}
+}
+
+//CLASES PARA CADA FORMULARIO
+export class AreaAfiliaciones {
+  [key: string]: any;
+  constructor(
     public fechaIngresoSgsss: Date,
     public tipoAfiliacion: number = 0,
     public observacion: string = '',
-    //RESTO DE FORMULARIOS
+
   ) {}
 }
+
+export class Cotizante {
+  [key: string]: any;
+  constructor(
+
+  ) {}
+}
+
+
+
