@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { MbsAplAffiliationDataService } from '../../../services/mbs-apl-affiliation-data.service';
 
@@ -8,6 +8,8 @@ import { MbsAplAffiliationDataService } from '../../../services/mbs-apl-affiliat
   styleUrls: ['./contributor-data.component.css']
 })
 export class ContributorDataComponent implements OnInit {
+
+  @Output() cambioFormulario = new EventEmitter<number>();
 
   contributorDataForm: FormGroup;
 
@@ -27,6 +29,13 @@ export class ContributorDataComponent implements OnInit {
       tipoAfiliacion: [null],
       observaciones: [null],
     }));
+  }
+
+
+
+
+  irAFormulario(numero: number) {
+    this.cambioFormulario.emit(numero);
   }
 
 }

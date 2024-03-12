@@ -7,41 +7,49 @@ import { Component } from '@angular/core';
 })
 export class MembershipAplicationComponent {
 
-  activeTabIndex = 0;
 
-  goBack() {
-    if (this.activeTabIndex > 0) {
-      this.activeTabIndex--;
-    }
+  formularioActual = 1;
+
+  cambiarFormulario(numero: number) {
+    this.formularioActual = numero;
   }
 
-  goForward() {
-    if (this.isLastTab()) {
-      console.log('Guardar datos');
-    }else if (this.activeTabIndex < 3) {
-      this.activeTabIndex++;
-    }
 
-  }
+  // activeTabIndex = 0;
 
-  getButtonText() {
-    return this.isLastTab() ? 'Guardar' : 'Siguiente';
-  }
+  // goBack() {
+  //   if (this.activeTabIndex > 0) {
+  //     this.activeTabIndex--;
+  //   }
+  // }
 
-  isFirstTab() {
-    return this.activeTabIndex === 0;
-  }
+  // goForward() {
+  //   if (this.isLastTab()) {
+  //     console.log('Guardar datos');
+  //   }else if (this.activeTabIndex < 3) {
+  //     this.activeTabIndex++;
+  //   }
 
-  isLastTab() {
-    return this.activeTabIndex === 3;
-  }
+  // }
 
-  getTabClass(index: number): string {
-    return this.activeTabIndex === index ? 'active-tab' : '';
-  }
+  // getButtonText() {
+  //   return this.isLastTab() ? 'Guardar' : 'Siguiente';
+  // }
 
-  isBackButtonInFirstTab() {
-    return this.activeTabIndex === 0;
-  }
+  // isFirstTab() {
+  //   return this.activeTabIndex === 0;
+  // }
+
+  // isLastTab() {
+  //   return this.activeTabIndex === 3;
+  // }
+
+  // getTabClass(index: number): string {
+  //   return this.activeTabIndex === index ? 'active-tab' : '';
+  // }
+
+  // isBackButtonInFirstTab() {
+  //   return this.activeTabIndex === 0;
+  // }
 
 }

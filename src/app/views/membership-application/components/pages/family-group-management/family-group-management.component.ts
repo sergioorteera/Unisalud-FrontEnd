@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-family-group-management',
@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./family-group-management.component.css']
 })
 export class FamilyGroupManagementComponent {
+
+  @Output() cambioFormulario = new EventEmitter<number>();
+
+  irAFormulario(numero: number) {
+    this.cambioFormulario.emit(numero);
+
+  }
 
 }

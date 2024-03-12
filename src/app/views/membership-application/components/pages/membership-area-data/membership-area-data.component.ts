@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 
 import { MbsAplAffiliationDataService } from '../../../services/mbs-apl-affiliation-data.service';
@@ -44,4 +44,15 @@ export class MembershipAreaDataComponent implements OnInit {
       affiliationAreaDataForm.controls['observaciones'].value,
     )
   }
+
+  @Output() cambioFormulario = new EventEmitter<number>();
+
+
+  irAFormulario(numero: number) {
+    this.onSaveMembershipAreaData();
+    this.cambioFormulario.emit(numero);
+  }
+
+
+
 }

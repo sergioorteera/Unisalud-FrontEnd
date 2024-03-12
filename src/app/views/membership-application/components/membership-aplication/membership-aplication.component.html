@@ -3,6 +3,49 @@
   <ul class="nav nav-tabs" id="myTab" role="tablist">
 
     <li class="nav-item" role="presentation">
+      <a class="nav-item nav-link navOne disabled">
+        <span class="text-body-small-sb">Datos del área de afiliaciones</span>
+      </a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-item nav-link navTwo disabled">
+        <span class="text-body-small-sb">Datos del cotizante</span>
+      </a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-item nav-link navThree disabled">
+        <span class="text-body-small-sb">Gestión grupo familiar</span>
+      </a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-item nav-link navFour disabled">
+        <span class="text-body-small-sb">Datos del empleador</span>
+      </a>
+    </li>
+
+  </ul>
+
+  <div *ngIf="formularioActual === 1">
+    <app-membership-area-data (cambioFormulario)="cambiarFormulario($event)"></app-membership-area-data>
+  </div>
+  <div *ngIf="formularioActual === 2">
+    <app-contributor-data (cambioFormulario)="cambiarFormulario($event)"></app-contributor-data>
+  </div>
+  <div *ngIf="formularioActual === 3">
+    <app-family-group-management (cambioFormulario)="cambiarFormulario($event)"></app-family-group-management>
+  </div>
+  <div *ngIf="formularioActual === 4">
+    <app-employer-data (cambioFormulario)="cambiarFormulario($event)"></app-employer-data>
+  </div>
+
+
+</section>
+
+<!-- <section class="container-fluid">
+
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
+
+    <li class="nav-item" role="presentation">
       <a href="#membership-area-data" class="nav-item nav-link link navOne disabled" id="membership-area-data-tab"
         data-bs-toggle="tab" role="tab" aria-controls="membership-area-data" aria-selected="true"
         [class.active-tab]="getTabClass(0)">
@@ -64,4 +107,4 @@
 
   </div>
 
-</section>
+</section> -->
