@@ -15,6 +15,8 @@ export class MembershipAreaDataComponent implements OnInit {
 
   @Output() cambioFormulario = new EventEmitter<number>();
   membershipAreaDataForm: FormGroup;
+  formSend:boolean = false;
+  membershipAreaData: AreaAfiliaciones;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -34,8 +36,10 @@ export class MembershipAreaDataComponent implements OnInit {
   }
 
   onSaveMembershipAreaData(): void {
-    const membershipAreaData: AreaAfiliaciones = this.getMembershipAreaDataFromForm(this.membershipAreaDataForm);
-    console.log(membershipAreaData);
+    this.formSend = true;
+    this.membershipAreaData = this.getMembershipAreaDataFromForm(this.membershipAreaDataForm);
+    console.log(this.membershipAreaData);
+    this.cambioFormulario.emit(2); //
   }
 
   private getMembershipAreaDataFromForm(affiliationAreaDataForm: FormGroup): AreaAfiliaciones {
@@ -47,7 +51,6 @@ export class MembershipAreaDataComponent implements OnInit {
   }
 
   irAFormulario(numero: number) {
-    this.onSaveMembershipAreaData();
     this.cambioFormulario.emit(numero);
   }
 

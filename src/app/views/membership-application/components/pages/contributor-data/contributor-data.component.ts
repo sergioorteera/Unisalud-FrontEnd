@@ -31,7 +31,9 @@ export class ContributorDataComponent implements OnInit {
     }));
   }
 
+  onSaveMembershipAreaData(): void {
 
+  }
 
 
   irAFormulario(numero: number) {

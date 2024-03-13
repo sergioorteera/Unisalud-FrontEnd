@@ -1,45 +1,434 @@
 <div class="container-fluid">
 
-  <div class="row">
-    <span class="title-page-form">2. Información del cotizante</span>
-  </div>
+  <form [formGroup]="contributorDataForm" (ngSubmit)="onSaveMembershipAreaData()">
 
-  <div class="row mb-3">
-
-    <div class="col-3">
-      <div class="custom-forms-container">
-        <div class="title-forms">Fecha ingreso al SGSSS</div>
-        <input type="date" class="form-control icon-date">
-      </div>
+    <div class="row">
+      <span class="title-page-form">2. Información del cotizante</span>
     </div>
 
-    <div class="col-9">
-      <div class="custom-forms-container">
-        <div class="title-forms">Tipo de afiliación</div>
-        <select class="form-select" aria-label="Default select example">
-          <option selected>Seleccionar respuesta</option>
-          <option value="1">One</option>
-          <option value="2">Two</option>
-          <option value="3">Three</option>
-        </select>
+    <fieldset>
+      <legend class="title-three">Datos personales</legend>
+      <div class="row">
+
+        <div class="col-3">
+          <div class="custom-forms-container">
+            <div class="title-forms text-body-small-sb">Tipo de afiliación</div>
+            <select class="form-select form-select-custom" aria-label="Default select example" formControlName="tipoAfiliacion">
+              <option selected>Seleccionar respuesta</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="col-3">
+          <div class="custom-forms-container">
+            <div class="title-forms">Número de identificación</div>
+            <input type="text" class="form-control form-control-custom" placeholder="Digitar respuesta">
+          </div>
+        </div>
+
+        <div class="col-3">
+          <div class="custom-forms-container">
+            <div class="title-forms text-body-small-sb">Fecha ingreso al SGSSS</div>
+            <input type="date" class="form-control form-control-custom" formControlName="fechaIngreso">
+          </div>
+        </div>
+
+        <div class="col-3">
+          <div class="custom-forms-container">
+            <div class="title-forms text-body-small-sb">Fecha ingreso al SGSSS</div>
+            <input type="date" class="form-control form-control-custom" formControlName="fechaIngreso">
+          </div>
+        </div>
       </div>
+
+      <div class="row">
+        <div class="col-3">
+          <div class="custom-forms-container">
+            <div class="title-forms">Número de identificación</div>
+            <input type="text" class="form-control form-control-custom" placeholder="Digitar respuesta">
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="custom-forms-container">
+            <div class="title-forms">Número de identificación</div>
+            <input type="text" class="form-control form-control-custom" placeholder="Digitar respuesta">
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="custom-forms-container">
+            <div class="title-forms">Número de identificación</div>
+            <input type="text" class="form-control form-control-custom" placeholder="Digitar respuesta">
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="custom-forms-container">
+            <div class="title-forms">Número de identificación</div>
+            <input type="text" class="form-control form-control-custom" placeholder="Digitar respuesta">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-3">
+          <div class="custom-forms-container">
+            <div class="title-forms text-body-small-sb">Fecha ingreso al SGSSS</div>
+            <input type="date" class="form-control form-control-custom" formControlName="fechaIngreso">
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="custom-forms-container">
+            <div class="title-forms text-body-small-sb">Tipo de afiliación</div>
+            <select class="form-select form-select-custom" aria-label="Default select example" formControlName="tipoAfiliacion">
+              <option selected>Seleccionar respuesta</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="custom-forms-container">
+            <div class="title-forms text-body-small-sb">Tipo de afiliación</div>
+            <select class="form-select form-select-custom" aria-label="Default select example" formControlName="tipoAfiliacion">
+              <option selected>Seleccionar respuesta</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="custom-forms-container">
+            <div class="title-forms text-body-small-sb">Tipo de afiliación</div>
+            <select class="form-select form-select-custom" aria-label="Default select example" formControlName="tipoAfiliacion">
+              <option selected>Seleccionar respuesta</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-3">
+          <div class="custom-forms-container">
+            <div class="title-forms text-body-small-sb">Tipo de afiliación</div>
+            <select class="form-select form-select-custom" aria-label="Default select example" formControlName="tipoAfiliacion">
+              <option selected>Seleccionar respuesta</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="custom-forms-container">
+            <div class="title-forms text-body-small-sb">Tipo de afiliación</div>
+            <select class="form-select form-select-custom" aria-label="Default select example" formControlName="tipoAfiliacion">
+              <option selected>Seleccionar respuesta</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="custom-forms-container">
+            <div class="title-forms text-body-small-sb">Tipo de afiliación</div>
+            <select class="form-select form-select-custom" aria-label="Default select example" formControlName="tipoAfiliacion">
+              <option selected>Seleccionar respuesta</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="custom-forms-container">
+            <div class="title-forms text-body-small-sb">Tipo de afiliación</div>
+            <select class="form-select form-select-custom" aria-label="Default select example" formControlName="tipoAfiliacion">
+              <option selected>Seleccionar respuesta</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-3">
+          <div class="custom-forms-container">
+            <div class="title-forms text-body-small-sb">Tipo de afiliación</div>
+            <select class="form-select form-select-custom" aria-label="Default select example" formControlName="tipoAfiliacion">
+              <option selected>Seleccionar respuesta</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="custom-forms-container">
+            <div class="title-forms text-body-small-sb">Tipo de afiliación</div>
+            <select class="form-select form-select-custom" aria-label="Default select example" formControlName="tipoAfiliacion">
+              <option selected>Seleccionar respuesta</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="custom-forms-container">
+            <div class="title-forms">Número de identificación</div>
+            <input type="text" class="form-control form-control-custom" placeholder="Digitar respuesta">
+          </div>
+        </div>
+      </div>
+
+    </fieldset>
+    <fieldset>
+      <legend class="title-three">Datos de salud</legend>
+      <div class="row">
+        <div class="col-3">
+          <div class="custom-forms-container">
+            <div class="title-forms text-body-small-sb">Tipo de afiliación</div>
+            <select class="form-select form-select-custom" aria-label="Default select example" formControlName="tipoAfiliacion">
+              <option selected>Seleccionar respuesta</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="custom-forms-container">
+            <div class="title-forms text-body-small-sb">Tipo de afiliación</div>
+            <select class="form-select form-select-custom" aria-label="Default select example" formControlName="tipoAfiliacion">
+              <option selected>Seleccionar respuesta</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="custom-forms-container">
+            <div class="title-forms text-body-small-sb">Tipo de afiliación</div>
+            <select class="form-select form-select-custom" aria-label="Default select example" formControlName="tipoAfiliacion">
+              <option selected>Seleccionar respuesta</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="custom-forms-container">
+            <div class="title-forms text-body-small-sb">Tipo de afiliación</div>
+            <select class="form-select form-select-custom" aria-label="Default select example" formControlName="tipoAfiliacion">
+              <option selected>Seleccionar respuesta</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-3">
+          <div class="custom-forms-container">
+            <div class="title-forms text-body-small-sb">Tipo de afiliación</div>
+            <select class="form-select form-select-custom" aria-label="Default select example" formControlName="tipoAfiliacion">
+              <option selected>Seleccionar respuesta</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="custom-forms-container">
+            <div class="title-forms text-body-small-sb">Tipo de afiliación</div>
+            <select class="form-select form-select-custom" aria-label="Default select example" formControlName="tipoAfiliacion">
+              <option selected>Seleccionar respuesta</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="custom-forms-container">
+            <div class="title-forms text-body-small-sb">Tipo de afiliación</div>
+            <select class="form-select form-select-custom" aria-label="Default select example" formControlName="tipoAfiliacion">
+              <option selected>Seleccionar respuesta</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="custom-forms-container">
+            <div class="title-forms text-body-small-sb">Tipo de afiliación</div>
+            <select class="form-select form-select-custom" aria-label="Default select example" formControlName="tipoAfiliacion">
+              <option selected>Seleccionar respuesta</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-3">
+          <div class="custom-forms-container">
+            <div class="title-forms text-body-small-sb">Tipo de afiliación</div>
+            <select class="form-select form-select-custom" aria-label="Default select example" formControlName="tipoAfiliacion">
+              <option selected>Seleccionar respuesta</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend class="title-three">Datos de ubicación y contacto</legend>
+      <div class="row">
+        <div class="col-3">
+          <div class="custom-forms-container">
+            <div class="title-forms text-body-small-sb">Tipo de afiliación</div>
+            <select class="form-select form-select-custom" aria-label="Default select example" formControlName="tipoAfiliacion">
+              <option selected>Seleccionar respuesta</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="custom-forms-container">
+            <div class="title-forms text-body-small-sb">Tipo de afiliación</div>
+            <select class="form-select form-select-custom" aria-label="Default select example" formControlName="tipoAfiliacion">
+              <option selected>Seleccionar respuesta</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="custom-forms-container">
+            <div class="title-forms">Número de identificación</div>
+            <input type="text" class="form-control form-control-custom" placeholder="Digitar respuesta">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-3">
+          <div class="custom-forms-container">
+            <div class="title-forms">Número de identificación</div>
+            <input type="text" class="form-control form-control-custom" placeholder="Digitar respuesta">
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="custom-forms-container">
+            <div class="title-forms text-body-small-sb">Tipo de afiliación</div>
+            <select class="form-select form-select-custom" aria-label="Default select example" formControlName="tipoAfiliacion">
+              <option selected>Seleccionar respuesta</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="custom-forms-container">
+            <div class="title-forms text-body-small-sb">Tipo de afiliación</div>
+            <select class="form-select form-select-custom" aria-label="Default select example" formControlName="tipoAfiliacion">
+              <option selected>Seleccionar respuesta</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="custom-forms-container">
+            <div class="title-forms">Número de identificación</div>
+            <input type="text" class="form-control form-control-custom" placeholder="Digitar respuesta">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-3">
+          <div class="custom-forms-container">
+            <div class="title-forms">Número de identificación</div>
+            <input type="text" class="form-control form-control-custom" placeholder="Digitar respuesta">
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="custom-forms-container">
+            <div class="title-forms">Número de identificación</div>
+            <input type="text" class="form-control form-control-custom" placeholder="Digitar respuesta">
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="custom-forms-container">
+            <div class="title-forms">Número de identificación</div>
+            <input type="text" class="form-control form-control-custom" placeholder="Digitar respuesta">
+          </div>
+        </div>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend class="title-three">Datos de contacto de emergencia</legend>
+      <div class="row">
+        <div class="col-3">
+          <div class="custom-forms-container">
+            <div class="title-forms">Número de identificación</div>
+            <input type="text" class="form-control form-control-custom" placeholder="Digitar respuesta">
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="custom-forms-container">
+            <div class="title-forms">Número de identificación</div>
+            <input type="text" class="form-control form-control-custom" placeholder="Digitar respuesta">
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="custom-forms-container">
+            <div class="title-forms">Número de identificación</div>
+            <input type="text" class="form-control form-control-custom" placeholder="Digitar respuesta">
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="custom-forms-container">
+            <div class="title-forms">Número de identificación</div>
+            <input type="text" class="form-control form-control-custom" placeholder="Digitar respuesta">
+          </div>
+        </div>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend class="title-three">Carga de archivos</legend>
+
+    </fieldset>
+
+
+
+    <div class="button-container">
+      <button (click)="irAFormulario(1)" type="button" class="btn-custom-normal">Atrás</button>
+      <button type="button" class="btn-custom-normal mx-3 text-body-heavy">Cancelar</button>
+      <button (click)="irAFormulario(3)" type="submit" class="btn-custom-normal">Siguiente</button>
     </div>
 
-  </div>
+  </form>
 
-  <div class="row">
-    <div class="col-12">
-      <div class="custom-textarea-container">
-        <div class="title-forms">Observaciones</div>
-        <textarea  class="form-control" placeholder="Digitar respuesta"></textarea>
-      </div>
-    </div>
-  </div>
-
-  <div class="button-container">
-    <button (click)="irAFormulario(1)" type="button" class="btn-custom-normal">Atrás</button>
-    <button type="button" class="btn-custom-normal mx-3 text-body-heavy">Cancelar</button>
-    <button (click)="irAFormulario(3)" type="submit" class="btn-custom-normal">Siguiente</button>
-  </div>
-
-  </div>
+</div>

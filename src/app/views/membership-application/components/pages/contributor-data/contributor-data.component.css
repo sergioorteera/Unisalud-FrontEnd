@@ -13,3 +13,72 @@
   color: var(--blue);
   padding-bottom: 50px;
 }
+
+.row{
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+/*Inpunt custom*/
+
+.form-control-custom {
+  font-family: "FiraSans-Regular";
+  font-size: 16px;
+  color: var(--blue);
+  padding-left: 28px;
+  padding-right: 30px;
+  padding-top: 27px;
+  padding-bottom: 8px;
+  border-radius: 8px;
+  border-width: 1px;
+  border-color: var(--blue);
+  width: 100%;
+  height: 100%;
+}
+
+.form-control-custom::placeholder {
+  color: var(--blue);
+}
+.form-control-custom:focus {
+  border-color: var(--neutral-70);
+  box-shadow: none;
+}
+
+/*select custom*/
+.form-select-custom {
+  font-family: "FiraSans-Regular";
+  font-size: 16px;
+  color: var(--blue);
+  padding-left: 28px;
+  padding-right: 30px;
+  padding-top: 27px;
+  padding-bottom: 8px;
+  border-radius: 8px;
+  border-width: 1px;
+  border-color: var(--blue);
+  width: 100%;
+  height: 100%;
+  /* --bs-form-select-bg-img: url('../../../../../../../assets/icons/select-icon.svg'); */
+}
+.form-select-custom::placeholder {
+  color: var(--blue);
+}
+.form-select-custom::placeholder {
+  color: var(--blue);
+}
+.form-select-custom:focus {
+  border-color: #949494;
+  box-shadow: none;
+}
+
+/*Data custom*/
+/* .icon-date{
+  --bs-form-select-bg-img: url('../../../../../../../assets/icons/select-icon.svg');
+} */
+
+/*Textarea custom*/
+.custom-textarea-container {
+  position: relative;
+  height: 126px;
+  width: 627px;
+}
