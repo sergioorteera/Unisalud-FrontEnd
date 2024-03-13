@@ -13,6 +13,7 @@ import { AreaAfiliaciones } from 'src/app/core/model/SolicitudAfiliacion.model';
 
 export class MembershipAreaDataComponent implements OnInit {
 
+  @Output() cambioFormulario = new EventEmitter<number>();
   membershipAreaDataForm: FormGroup;
 
   constructor(
@@ -45,14 +46,9 @@ export class MembershipAreaDataComponent implements OnInit {
     )
   }
 
-  @Output() cambioFormulario = new EventEmitter<number>();
-
-
   irAFormulario(numero: number) {
     this.onSaveMembershipAreaData();
     this.cambioFormulario.emit(numero);
   }
-
-
 
 }
