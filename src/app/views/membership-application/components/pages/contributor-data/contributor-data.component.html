@@ -8,291 +8,296 @@
 
     <fieldset>
       <legend class="title-three">Datos personales</legend>
-      <div class="row">
+      <div class="row mb-3">
 
         <div class="col-3">
-          <div class="custom-forms-container">
-            <div class="title-forms text-body-small-sb">Tipo de afiliación</div>
-            <select class="form-select form-select-custom" aria-label="Default select example" formControlName="tipoAfiliacion">
-              <option selected>Seleccionar respuesta</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
+          <div class="form-floating">
+            <select class="form-select text-body" id="floatingSelectGrid" formControlName="tipoIdentificacion">
+              <option value="null" selected disabled>Seleccionar respuesta</option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
             </select>
+            <label class="text-body-small-sb" for="floatingSelectGrid">Tipo de identificación</label>
           </div>
         </div>
 
         <div class="col-3">
-          <div class="custom-forms-container">
-            <div class="title-forms">Número de identificación</div>
-            <input type="text" class="form-control form-control-custom" placeholder="Digitar respuesta">
+          <div class="form-floating">
+            <input type="text" class="form-control text-body" id="floatingInputGrid" placeholder="Digitar respuesta" formControlName="numeroIdentificacion">
+            <label class="text-body-small-sb" for="floatingInputGrid">Número de identificación</label>
           </div>
         </div>
 
         <div class="col-3">
-          <div class="custom-forms-container">
-            <div class="title-forms text-body-small-sb">Fecha ingreso al SGSSS</div>
-            <input type="date" class="form-control form-control-custom" formControlName="fechaIngreso">
+          <div class="form-floating">
+            <input type="date" class="form-control text-body" id="floatingInputGrid" formControlName="fechaExpedicion">
+            <label class="text-body-small-sb" for="floatingInputGrid">Fecha de expedición</label>
           </div>
         </div>
 
         <div class="col-3">
-          <div class="custom-forms-container">
-            <div class="title-forms text-body-small-sb">Fecha ingreso al SGSSS</div>
-            <input type="date" class="form-control form-control-custom" formControlName="fechaIngreso">
+          <div class="form-floating">
+            <input type="date" class="form-control text-body" id="floatingInputGrid" formControlName="fechaVencimiento">
+            <label class="text-body-small-sb" for="floatingInputGrid">Fecha de vencimiento</label>
           </div>
         </div>
       </div>
 
-      <div class="row">
+      <div class="row mb-3">
         <div class="col-3">
-          <div class="custom-forms-container">
-            <div class="title-forms">Número de identificación</div>
-            <input type="text" class="form-control form-control-custom" placeholder="Digitar respuesta">
+          <div class="form-floating">
+            <input type="text" class="form-control text-body" id="floatingInputGrid" placeholder="Digitar respuesta" formControlName="primerApellido">
+            <label class="text-body-small-sb" for="floatingInputGrid">Primer apellido</label>
           </div>
         </div>
         <div class="col-3">
-          <div class="custom-forms-container">
-            <div class="title-forms">Número de identificación</div>
-            <input type="text" class="form-control form-control-custom" placeholder="Digitar respuesta">
+          <div class="form-floating">
+            <input type="text" class="form-control text-body" id="floatingInputGrid" placeholder="Digitar respuesta" formControlName="segundoApeliido">
+            <label class="text-body-small-sb" for="floatingInputGrid">Segundo apellido</label>
           </div>
         </div>
         <div class="col-3">
-          <div class="custom-forms-container">
-            <div class="title-forms">Número de identificación</div>
-            <input type="text" class="form-control form-control-custom" placeholder="Digitar respuesta">
+          <div class="form-floating">
+            <input type="text" class="form-control text-body" id="floatingInputGrid" placeholder="Digitar respuesta" formControlName="primerNombre">
+            <label class="text-body-small-sb" for="floatingInputGrid">Primer nombre</label>
           </div>
         </div>
         <div class="col-3">
-          <div class="custom-forms-container">
-            <div class="title-forms">Número de identificación</div>
-            <input type="text" class="form-control form-control-custom" placeholder="Digitar respuesta">
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-3">
-          <div class="custom-forms-container">
-            <div class="title-forms text-body-small-sb">Fecha ingreso al SGSSS</div>
-            <input type="date" class="form-control form-control-custom" formControlName="fechaIngreso">
-          </div>
-        </div>
-        <div class="col-3">
-          <div class="custom-forms-container">
-            <div class="title-forms text-body-small-sb">Tipo de afiliación</div>
-            <select class="form-select form-select-custom" aria-label="Default select example" formControlName="tipoAfiliacion">
-              <option selected>Seleccionar respuesta</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
-            </select>
-          </div>
-        </div>
-        <div class="col-3">
-          <div class="custom-forms-container">
-            <div class="title-forms text-body-small-sb">Tipo de afiliación</div>
-            <select class="form-select form-select-custom" aria-label="Default select example" formControlName="tipoAfiliacion">
-              <option selected>Seleccionar respuesta</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
-            </select>
-          </div>
-        </div>
-        <div class="col-3">
-          <div class="custom-forms-container">
-            <div class="title-forms text-body-small-sb">Tipo de afiliación</div>
-            <select class="form-select form-select-custom" aria-label="Default select example" formControlName="tipoAfiliacion">
-              <option selected>Seleccionar respuesta</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
-            </select>
+          <div class="form-floating">
+            <input type="text" class="form-control text-body" id="floatingInputGrid" placeholder="Digitar respuesta" formControlName="SegundoNombre">
+            <label class="text-body-small-sb" for="floatingInputGrid">Segundo nombre</label>
           </div>
         </div>
       </div>
-      <div class="row">
+      <div class="row mb-3">
         <div class="col-3">
-          <div class="custom-forms-container">
-            <div class="title-forms text-body-small-sb">Tipo de afiliación</div>
-            <select class="form-select form-select-custom" aria-label="Default select example" formControlName="tipoAfiliacion">
-              <option selected>Seleccionar respuesta</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
+          <div class="form-floating">
+            <select class="form-select text-body" id="floatingSelectGrid" formControlName="fechaNacimiento">
+              <option value="null" selected disabled>Seleccionar respuesta</option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
             </select>
+            <label class="text-body-small-sb" for="floatingSelectGrid">Fecha de nacimiento</label>
           </div>
         </div>
         <div class="col-3">
-          <div class="custom-forms-container">
-            <div class="title-forms text-body-small-sb">Tipo de afiliación</div>
-            <select class="form-select form-select-custom" aria-label="Default select example" formControlName="tipoAfiliacion">
-              <option selected>Seleccionar respuesta</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
+          <div class="form-floating">
+            <select class="form-select text-body" id="floatingSelectGrid" formControlName="paisNacimiento">
+              <option value="null" selected disabled>Seleccionar respuesta</option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
             </select>
+            <label class="text-body-small-sb" for="floatingSelectGrid">País de nacimiento</label>
           </div>
         </div>
         <div class="col-3">
-          <div class="custom-forms-container">
-            <div class="title-forms text-body-small-sb">Tipo de afiliación</div>
-            <select class="form-select form-select-custom" aria-label="Default select example" formControlName="tipoAfiliacion">
-              <option selected>Seleccionar respuesta</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
+          <div class="form-floating">
+            <select class="form-select text-body" id="floatingSelectGrid" formControlName="deptNacimiento">
+              <option value="null" selected disabled>Seleccionar respuesta</option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
             </select>
+            <label class="text-body-small-sb" for="floatingSelectGrid">Departamento de nacimiento</label>
           </div>
         </div>
         <div class="col-3">
-          <div class="custom-forms-container">
-            <div class="title-forms text-body-small-sb">Tipo de afiliación</div>
-            <select class="form-select form-select-custom" aria-label="Default select example" formControlName="tipoAfiliacion">
-              <option selected>Seleccionar respuesta</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
+          <div class="form-floating">
+            <select class="form-select text-body" id="floatingSelectGrid" formControlName="ciudadNacimiento">
+              <option value="null" selected disabled>Seleccionar respuesta</option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
             </select>
+            <label class="text-body-small-sb" for="floatingSelectGrid">Ciudad de nacimiento</label>
           </div>
         </div>
       </div>
-      <div class="row">
+      <div class="row mb-3">
         <div class="col-3">
-          <div class="custom-forms-container">
-            <div class="title-forms text-body-small-sb">Tipo de afiliación</div>
-            <select class="form-select form-select-custom" aria-label="Default select example" formControlName="tipoAfiliacion">
-              <option selected>Seleccionar respuesta</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
+          <div class="form-floating">
+            <select class="form-select text-body" id="floatingSelectGrid" formControlName="grupoEtnico">
+              <option value="null" selected disabled>Seleccionar respuesta</option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
             </select>
+            <label class="text-body-small-sb" for="floatingSelectGrid">Grupo étnico</label>
           </div>
         </div>
         <div class="col-3">
-          <div class="custom-forms-container">
-            <div class="title-forms text-body-small-sb">Tipo de afiliación</div>
-            <select class="form-select form-select-custom" aria-label="Default select example" formControlName="tipoAfiliacion">
-              <option selected>Seleccionar respuesta</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
+          <div class="form-floating">
+            <select class="form-select text-body" id="floatingSelectGrid" formControlName="grupoPoblacional">
+              <option value="null" selected disabled>Seleccionar respuesta</option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
             </select>
+            <label class="text-body-small-sb" for="floatingSelectGrid">Grupo poblacional</label>
           </div>
         </div>
         <div class="col-3">
-          <div class="custom-forms-container">
-            <div class="title-forms">Número de identificación</div>
-            <input type="text" class="form-control form-control-custom" placeholder="Digitar respuesta">
+          <div class="form-floating">
+            <select class="form-select text-body" id="floatingSelectGrid" formControlName="sexo">
+              <option value="null" selected disabled>Seleccionar respuesta</option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+            </select>
+            <label class="text-body-small-sb" for="floatingSelectGrid">Sexo</label>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="form-floating">
+            <select class="form-select text-body" id="floatingSelectGrid" formControlName="orientacionSexual">
+              <option value="null" selected disabled>Seleccionar respuesta</option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+            </select>
+            <label class="text-body-small-sb" for="floatingSelectGrid">Orientación sexual</label>
           </div>
         </div>
       </div>
-
+      <div class="row mb-3">
+        <div class="col-3">
+          <div class="form-floating">
+            <select class="form-select text-body" id="floatingSelectGrid" formControlName="estadoCivil">
+              <option value="null" selected disabled>Seleccionar respuesta</option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+            </select>
+            <label class="text-body-small-sb" for="floatingSelectGrid">Estado civil</label>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="form-floating">
+            <select class="form-select text-body" id="floatingSelectGrid" formControlName="escolaridad">
+              <option value="null" selected disabled>Seleccionar respuesta</option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+            </select>
+            <label class="text-body-small-sb" for="floatingSelectGrid">Escolaridad</label>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="form-floating">
+            <input type="text" class="form-control text-body" id="floatingInputGrid" placeholder="Digite su respuesta" formControlName="profesion">
+            <label class="text-body-small-sb" for="floatingInputGrid">Profesión</label>
+          </div>
+        </div>
+      </div>
     </fieldset>
+
     <fieldset>
       <legend class="title-three">Datos de salud</legend>
-      <div class="row">
+      <div class="row mb-3">
         <div class="col-3">
-          <div class="custom-forms-container">
-            <div class="title-forms text-body-small-sb">Tipo de afiliación</div>
-            <select class="form-select form-select-custom" aria-label="Default select example" formControlName="tipoAfiliacion">
-              <option selected>Seleccionar respuesta</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
+          <div class="form-floating">
+            <select class="form-select text-body" id="floatingSelectGrid" formControlName="epsAnterior">
+              <option value="null" selected disabled>Seleccionar respuesta</option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
             </select>
+            <label class="text-body-small-sb" for="floatingSelectGrid">Eps anterior</label>
           </div>
         </div>
         <div class="col-3">
-          <div class="custom-forms-container">
-            <div class="title-forms text-body-small-sb">Tipo de afiliación</div>
-            <select class="form-select form-select-custom" aria-label="Default select example" formControlName="tipoAfiliacion">
-              <option selected>Seleccionar respuesta</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
+          <div class="form-floating">
+            <select class="form-select text-body" id="floatingSelectGrid" formControlName="regimen">
+              <option value="null" selected disabled>Seleccionar respuesta</option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
             </select>
+            <label class="text-body-small-sb" for="floatingSelectGrid">Régimen</label>
           </div>
         </div>
         <div class="col-3">
-          <div class="custom-forms-container">
-            <div class="title-forms text-body-small-sb">Tipo de afiliación</div>
-            <select class="form-select form-select-custom" aria-label="Default select example" formControlName="tipoAfiliacion">
-              <option selected>Seleccionar respuesta</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
+          <div class="form-floating">
+            <select class="form-select text-body" id="floatingSelectGrid" formControlName="tipoSangre">
+              <option value="null" selected disabled>Seleccionar respuesta</option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
             </select>
+            <label class="text-body-small-sb" for="floatingSelectGrid">Tipo de sangre</label>
           </div>
         </div>
         <div class="col-3">
-          <div class="custom-forms-container">
-            <div class="title-forms text-body-small-sb">Tipo de afiliación</div>
-            <select class="form-select form-select-custom" aria-label="Default select example" formControlName="tipoAfiliacion">
-              <option selected>Seleccionar respuesta</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
+          <div class="form-floating">
+            <select class="form-select text-body" id="floatingSelectGrid" formControlName="rh">
+              <option value="null" selected disabled>Seleccionar respuesta</option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
             </select>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-3">
-          <div class="custom-forms-container">
-            <div class="title-forms text-body-small-sb">Tipo de afiliación</div>
-            <select class="form-select form-select-custom" aria-label="Default select example" formControlName="tipoAfiliacion">
-              <option selected>Seleccionar respuesta</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
-            </select>
-          </div>
-        </div>
-        <div class="col-3">
-          <div class="custom-forms-container">
-            <div class="title-forms text-body-small-sb">Tipo de afiliación</div>
-            <select class="form-select form-select-custom" aria-label="Default select example" formControlName="tipoAfiliacion">
-              <option selected>Seleccionar respuesta</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
-            </select>
-          </div>
-        </div>
-        <div class="col-3">
-          <div class="custom-forms-container">
-            <div class="title-forms text-body-small-sb">Tipo de afiliación</div>
-            <select class="form-select form-select-custom" aria-label="Default select example" formControlName="tipoAfiliacion">
-              <option selected>Seleccionar respuesta</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
-            </select>
-          </div>
-        </div>
-        <div class="col-3">
-          <div class="custom-forms-container">
-            <div class="title-forms text-body-small-sb">Tipo de afiliación</div>
-            <select class="form-select form-select-custom" aria-label="Default select example" formControlName="tipoAfiliacion">
-              <option selected>Seleccionar respuesta</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
-            </select>
+            <label class="text-body-small-sb" for="floatingSelectGrid">RH</label>
           </div>
         </div>
       </div>
-      <div class="row">
+      <div class="row mb-3">
         <div class="col-3">
-          <div class="custom-forms-container">
-            <div class="title-forms text-body-small-sb">Tipo de afiliación</div>
-            <select class="form-select form-select-custom" aria-label="Default select example" formControlName="tipoAfiliacion">
-              <option selected>Seleccionar respuesta</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
+          <div class="form-floating">
+            <select class="form-select text-body" id="floatingSelectGrid" formControlName="discapacidadFisica">
+              <option value="null" selected disabled>Seleccionar respuesta</option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
             </select>
+            <label class="text-body-small-sb" for="floatingSelectGrid">Discapacidad física</label>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="form-floating">
+            <select class="form-select text-body" id="floatingSelectGrid" formControlName="discapacidadVisual">
+              <option value="null" selected disabled>Seleccionar respuesta</option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+            </select>
+            <label class="text-body-small-sb" for="floatingSelectGrid">Discapacidad visual</label>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="form-floating">
+            <select class="form-select text-body" id="floatingSelectGrid" formControlName="discapacidadCognitiva">
+              <option value="null" selected disabled>Seleccionar respuesta</option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+            </select>
+            <label class="text-body-small-sb" for="floatingSelectGrid">Discapacidad cognitiva</label>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="form-floating">
+            <select class="form-select text-body" id="floatingSelectGrid" formControlName="discapacidadAuditiva">
+              <option value="null" selected disabled>Seleccionar respuesta</option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+            </select>
+            <label class="text-body-small-sb" for="floatingSelectGrid">Discapacidad auditiva</label>
+          </div>
+        </div>
+      </div>
+      <div class="row mb-3">
+        <div class="col-3">
+          <div class="form-floating">
+            <select class="form-select text-body" id="floatingSelectGrid" formControlName="planComplementario">
+              <option value="null" selected disabled>Seleccionar respuesta</option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+            </select>
+            <label class="text-body-small-sb" for="floatingSelectGrid">Plan complementario</label>
           </div>
         </div>
       </div>
@@ -300,125 +305,143 @@
 
     <fieldset>
       <legend class="title-three">Datos de ubicación y contacto</legend>
-      <div class="row">
+      <div class="row mb-3">
         <div class="col-3">
-          <div class="custom-forms-container">
-            <div class="title-forms text-body-small-sb">Tipo de afiliación</div>
-            <select class="form-select form-select-custom" aria-label="Default select example" formControlName="tipoAfiliacion">
-              <option selected>Seleccionar respuesta</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
+          <div class="form-floating">
+            <select class="form-select text-body" id="floatingSelectGrid" formControlName="deptResidencia">
+              <option value="null" selected disabled>Seleccionar respuesta</option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
             </select>
+            <label class="text-body-small-sb" for="floatingSelectGrid">Departamento de residencia</label>
           </div>
         </div>
         <div class="col-3">
-          <div class="custom-forms-container">
-            <div class="title-forms text-body-small-sb">Tipo de afiliación</div>
-            <select class="form-select form-select-custom" aria-label="Default select example" formControlName="tipoAfiliacion">
-              <option selected>Seleccionar respuesta</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
+          <div class="form-floating">
+            <select class="form-select text-body" id="floatingSelectGrid" formControlName="ciudadResidencia">
+              <option value="null" selected disabled>Seleccionar respuesta</option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
             </select>
+            <label class="text-body-small-sb" for="floatingSelectGrid">Ciudad de residencia</label>
           </div>
         </div>
         <div class="col-6">
-          <div class="custom-forms-container">
-            <div class="title-forms">Número de identificación</div>
-            <input type="text" class="form-control form-control-custom" placeholder="Digitar respuesta">
+          <div class="form-floating">
+            <input type="text" class="form-control text-body" id="floatingInputGrid" placeholder="Digitar respuesta" formControlName="direccionResidencia">
+            <label class="text-body-small-sb" for="floatingInputGrid">Dirección de residencia</label>
           </div>
         </div>
       </div>
-      <div class="row">
+      <div class="row mb-3">
         <div class="col-3">
-          <div class="custom-forms-container">
-            <div class="title-forms">Número de identificación</div>
-            <input type="text" class="form-control form-control-custom" placeholder="Digitar respuesta">
+          <div class="form-floating">
+            <input type="text" class="form-control text-body" id="floatingInputGrid" placeholder="Digitar respuesta" formControlName="barrio">
+            <label class="text-body-small-sb" for="floatingInputGrid">Barrio</label>
           </div>
         </div>
         <div class="col-3">
-          <div class="custom-forms-container">
-            <div class="title-forms text-body-small-sb">Tipo de afiliación</div>
-            <select class="form-select form-select-custom" aria-label="Default select example" formControlName="tipoAfiliacion">
-              <option selected>Seleccionar respuesta</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
+          <div class="form-floating">
+            <select class="form-select text-body" id="floatingSelectGrid" formControlName="zona">
+              <option value="null" selected disabled>Seleccionar respuesta</option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
             </select>
+            <label class="text-body-small-sb" for="floatingSelectGrid">Zona</label>
           </div>
         </div>
         <div class="col-3">
-          <div class="custom-forms-container">
-            <div class="title-forms text-body-small-sb">Tipo de afiliación</div>
-            <select class="form-select form-select-custom" aria-label="Default select example" formControlName="tipoAfiliacion">
-              <option selected>Seleccionar respuesta</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
+          <div class="form-floating">
+            <select class="form-select text-body" id="floatingSelectGrid" formControlName="estrato">
+              <option value="null" selected disabled>Seleccionar respuesta</option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
             </select>
+            <label class="text-body-small-sb" for="floatingSelectGrid">Estrato</label>
           </div>
         </div>
         <div class="col-3">
-          <div class="custom-forms-container">
-            <div class="title-forms">Número de identificación</div>
-            <input type="text" class="form-control form-control-custom" placeholder="Digitar respuesta">
+          <div class="form-floating">
+            <input type="text" class="form-control text-body" id="floatingInputGrid" placeholder="Digitar respuesta" formControlName="celular">
+            <label class="text-body-small-sb" for="floatingInputGrid">Celular</label>
           </div>
         </div>
       </div>
-      <div class="row">
+      <div class="row mb-3">
         <div class="col-3">
-          <div class="custom-forms-container">
-            <div class="title-forms">Número de identificación</div>
-            <input type="text" class="form-control form-control-custom" placeholder="Digitar respuesta">
+          <div class="form-floating">
+            <input type="text" class="form-control text-body" id="floatingInputGrid" placeholder="Digitar respuesta" formControlName="telefono">
+            <label class="text-body-small-sb" for="floatingInputGrid">Teléfono</label>
           </div>
         </div>
         <div class="col-3">
-          <div class="custom-forms-container">
-            <div class="title-forms">Número de identificación</div>
-            <input type="text" class="form-control form-control-custom" placeholder="Digitar respuesta">
+          <div class="form-floating">
+            <input type="text" class="form-control text-body" id="floatingInputGrid" placeholder="Digitar respuesta" formControlName="correo">
+            <label class="text-body-small-sb" for="floatingInputGrid">Correo electrónico</label>
           </div>
         </div>
         <div class="col-3">
-          <div class="custom-forms-container">
-            <div class="title-forms">Número de identificación</div>
-            <input type="text" class="form-control form-control-custom" placeholder="Digitar respuesta">
+          <div class="form-floating">
+            <input type="text" class="form-control text-body" id="floatingInputGrid" placeholder="Digitar respuesta" formControlName="correoAlternativo">
+            <label class="text-body-small-sb" for="floatingInputGrid">Correo electrónico alternativo</label>
           </div>
         </div>
       </div>
     </fieldset>
+
     <fieldset>
       <legend class="title-three">Datos de contacto de emergencia</legend>
-      <div class="row">
+      <div class="row mb-3">
         <div class="col-3">
-          <div class="custom-forms-container">
-            <div class="title-forms">Número de identificación</div>
-            <input type="text" class="form-control form-control-custom" placeholder="Digitar respuesta">
+          <div class="form-floating">
+            <input type="text" class="form-control text-body" id="floatingInputGrid" placeholder="Digitar respuesta" formControlName="nombreEmer">
+            <label class="text-body-small-sb" for="floatingInputGrid">Nombre completo</label>
           </div>
         </div>
         <div class="col-3">
-          <div class="custom-forms-container">
-            <div class="title-forms">Número de identificación</div>
-            <input type="text" class="form-control form-control-custom" placeholder="Digitar respuesta">
+          <div class="form-floating">
+            <input type="text" class="form-control text-body" id="floatingInputGrid" placeholder="Digitar respuesta" formControlName="direccionEmer">
+            <label class="text-body-small-sb" for="floatingInputGrid">Dirección</label>
           </div>
         </div>
         <div class="col-3">
-          <div class="custom-forms-container">
-            <div class="title-forms">Número de identificación</div>
-            <input type="text" class="form-control form-control-custom" placeholder="Digitar respuesta">
+          <div class="form-floating">
+            <input type="text" class="form-control text-body" id="floatingInputGrid" placeholder="Digitar respuesta" formControlName="telefonoEmer">
+            <label class="text-body-small-sb" for="floatingInputGrid">Teléfono</label>
           </div>
         </div>
         <div class="col-3">
-          <div class="custom-forms-container">
-            <div class="title-forms">Número de identificación</div>
-            <input type="text" class="form-control form-control-custom" placeholder="Digitar respuesta">
+          <div class="form-floating">
+            <input type="text" class="form-control text-body" id="floatingInputGrid" placeholder="Digitar respuesta" formControlName="celularEmer">
+            <label class="text-body-small-sb" for="floatingInputGrid">Celular</label>
           </div>
         </div>
       </div>
     </fieldset>
+
     <fieldset>
       <legend class="title-three">Carga de archivos</legend>
+      <div class="row mb-3">
+        <div class="col-3">
+          <div class="form-floating">
+            <input type="file" class="form-control text-body" id="floatingInputGrid" formControlName="celularEmer">
+            <label class="text-body-small-sb" for="floatingInputGrid">Celular</label>
+          </div>
+        </div>
+        <div class="col-3">
 
+        </div>
+        <div class="col-3">
+
+        </div>
+        <div class="col-3">
+
+        </div>
+      </div>
     </fieldset>
 
 

@@ -6,36 +6,35 @@
 
     <div class="row mb-3">
       <div class="col-3">
-        <div class="custom-forms-container">
-          <div class="title-forms text-body-small-sb">Fecha ingreso al SGSSS</div>
-          <input type="date" class="form-control form-control-custom" formControlName="fechaIngreso">
+        <div class="form-floating">
+          <input type="date" class="form-control text-body" id="floatingInputGrid" formControlName="fechaIngreso">
+          <label class="text-body-small-sb" for="floatingInputGrid">Fecha ingreso al SGSSS</label>
         </div>
       </div>
 
-      <div class="col-9">
-        <div class="custom-forms-container">
-          <div class="title-forms text-body-small-sb">Tipo de afiliación</div>
-          <select class="form-select form-select-custom" aria-label="Default select example" formControlName="tipoAfiliacion">
-            <option selected>Seleccionar respuesta</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
+      <div class="col-3">
+        <div class="form-floating">
+          <select class="form-select text-body" id="floatingSelectGrid" formControlName="tipoAfiliacion">
+            <option value="null" selected disabled>Seleccionar respuesta</option>
+            <option value="NUEVO">Nuevo</option>
+            <option value="REINTEGRO">Reintegro</option>
+            <option value="TRASLADO">Traslado</option>
           </select>
+          <label class="text-body-small-sb" for="floatingSelectGrid">Tipo de afiliación</label>
         </div>
+
+
       </div>
     </div>
 
-    <div class="row">
-      <div class="col-xl-6 col-lg-6 col-md-6 pe-xl-3">
-        <div class="custom-textarea-container">
-          <div class="title-forms text-body-small-sb">Observaciones</div>
-          <textarea class="form-control form-control-custom text-body" placeholder="Digitar respuesta" formControlName="observaciones"></textarea>
+    <div class="row mb-3">
+      <div class="col-6">
+        <div class="form-floating">
+          <textarea class="form-control text-body" placeholder="Digitar respuesta" id="floatingTextarea2" formControlName="observaciones"></textarea>
+          <label class="text-body-small-sb" for="floatingTextarea2">Observaciones</label>
         </div>
       </div>
     </div>
-
-
-
 
     <div class="button-container">
       <button type="button" class="btn-custom-disabled" disabled >Atrás</button>

@@ -159,20 +159,5 @@
 
 /*Forms custom*/
 
-.custom-forms-container {
-  position: relative;
-  height: 63px;
-  width: 303px;
-}
-
-.title-forms {
-  position: absolute;
-  overflow: hidden;
-  white-space: nowrap;
-  color: var(--neutral-70);
-  padding-top: 11px;
-  padding-left: 30px;
-  padding-right: 30px;
-}
 
 

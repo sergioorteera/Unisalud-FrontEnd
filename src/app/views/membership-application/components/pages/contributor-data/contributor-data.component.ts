@@ -26,7 +26,7 @@ export class ContributorDataComponent implements OnInit {
   initForm(): FormGroup {
     return (this.contributorDataForm = this.formBuilder.group({
       fechaIngreso: [null],
-      tipoAfiliacion: [null],
+      tipoIdentificacion: [null],
       observaciones: [null],
     }));
   }
