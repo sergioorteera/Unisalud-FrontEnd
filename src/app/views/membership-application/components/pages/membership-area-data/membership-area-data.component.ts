@@ -2,7 +2,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 
 import { MbsAplAffiliationDataService } from '../../../services/mbs-apl-affiliation-data.service';
-import { AreaAfiliaciones } from 'src/app/core/model/SolicitudAfiliacion.model';
+import { AreaAfiliaciones } from 'src/app/core/model/AffiliationData.model';
 
 
 @Component({

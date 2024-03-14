@@ -48,7 +48,7 @@ export interface Pais {
   codigo: string;
 }
 
-export interface SolicitudAfiliacionDetail {
+export interface Datos {
   estado: Estado[];
   actividadEconomica: ActividadEconomica[];
   sede: Sede[];
@@ -59,10 +59,17 @@ export interface SolicitudAfiliacionDetail {
   pais: Pais[];
 }
 
-export class SolicitudAfiliacion {
+export interface AffiliationDataDetail {
+  datos: Datos;
+}
+
+
+
+//AFILIACION COMPLETA
+export class AffiliationData {
   [key: string]: any;
   constructor(
-    //AFILIACION COMPLETA
+
   ) {}
 }
 

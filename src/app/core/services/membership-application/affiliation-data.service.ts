@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/app/environment/environment';
-import { SolicitudAfiliacionDetail, SolicitudAfiliacion } from '../../model/SolicitudAfiliacion.model';
+import { AffiliationDataDetail, AffiliationData } from '../../model/AffiliationData.model';
 
 @Injectable({
   providedIn: 'root'
@@ -13,12 +13,12 @@ export class AffiliationDataService {
 
   constructor(private http: HttpClient) { }
 
-  getExternalEntity(): Observable<SolicitudAfiliacionDetail>{
-    return this.http.get<SolicitudAfiliacionDetail>(`${this.apiUrl}/catalogos`);
+  getExternalEntity(): Observable<AffiliationDataDetail>{
+    return this.http.get<AffiliationDataDetail>(`${this.apiUrl}/catalogos`);
   }
 
-  createSolicitudAfiliacion(solicitudAfiliacion: SolicitudAfiliacion):Observable<SolicitudAfiliacion> {
-    return this.http.post<SolicitudAfiliacion>(`${this.apiUrl}/afiliaciones`, solicitudAfiliacion)
+  createSolicitudAfiliacion(solicitudAfiliacion: AffiliationData):Observable<AffiliationData> {
+    return this.http.post<AffiliationData>(`${this.apiUrl}/afiliaciones`, solicitudAfiliacion)
   }
 
 }

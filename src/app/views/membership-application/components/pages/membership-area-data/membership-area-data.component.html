@@ -7,20 +7,20 @@
     <div class="row mb-3">
       <div class="col-3">
         <div class="form-floating">
-          <input type="date" class="form-control text-body" id="floatingInputGrid" formControlName="fechaIngreso">
-          <label class="text-body-small-sb" for="floatingInputGrid">Fecha ingreso al SGSSS</label>
+          <input type="date" class="form-control text-body" id="fechaIngreso" formControlName="fechaIngreso">
+          <label class="text-body-small-sb" >Fecha ingreso al SGSSS</label>
         </div>
       </div>
 
       <div class="col-3">
         <div class="form-floating">
-          <select class="form-select text-body" id="floatingSelectGrid" formControlName="tipoAfiliacion">
+          <select class="form-select text-body" id="tipoAfiliacion" formControlName="tipoAfiliacion">
             <option value="null" selected disabled>Seleccionar respuesta</option>
             <option value="NUEVO">Nuevo</option>
             <option value="REINTEGRO">Reintegro</option>
             <option value="TRASLADO">Traslado</option>
           </select>
-          <label class="text-body-small-sb" for="floatingSelectGrid">Tipo de afiliación</label>
+          <label class="text-body-small-sb">Tipo de afiliación</label>
         </div>
 
 
@@ -30,8 +30,8 @@
     <div class="row mb-3">
       <div class="col-6">
         <div class="form-floating">
-          <textarea class="form-control text-body" placeholder="Digitar respuesta" id="floatingTextarea2" formControlName="observaciones"></textarea>
-          <label class="text-body-small-sb" for="floatingTextarea2">Observaciones</label>
+          <textarea class="form-control text-body" placeholder="Digitar respuesta" id="observaciones" formControlName="observaciones"></textarea>
+          <label class="text-body-small-sb">Observaciones</label>
         </div>
       </div>
     </div>

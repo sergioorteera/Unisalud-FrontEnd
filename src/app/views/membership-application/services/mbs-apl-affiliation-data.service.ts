@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
-import { SolicitudAfiliacionDetail } from 'src/app/core/model/SolicitudAfiliacion.model';
+import { AffiliationDataDetail } from 'src/app/core/model/AffiliationData.model';
 import { AffiliationDataService } from '../../../core/services/membership-application/affiliation-data.service';
 
 @Injectable({
@@ -13,7 +13,7 @@ export class MbsAplAffiliationDataService {
     private affiliationDataService: AffiliationDataService,
   ) { }
 
-  getAffiliationData(): Observable<SolicitudAfiliacionDetail>{
+  getAffiliationData(): Observable<AffiliationDataDetail>{
     return this.affiliationDataService.getExternalEntity();
   }
 
