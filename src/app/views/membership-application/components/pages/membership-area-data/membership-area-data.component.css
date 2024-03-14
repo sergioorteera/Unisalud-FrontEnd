@@ -5,10 +5,18 @@
   padding-top: 50px;
   padding-bottom: 50px;
   border-top-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 
 .title-page-form {
   padding-bottom: 50px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  background-color: var(--white);
 }
 
 /* FORMS */

@@ -11,14 +11,12 @@ import { ActividadEconomica, AffiliationDataDetail, Departamento, Dependencia, D
 export class ContributorDataComponent implements OnInit {
 
   @Output() cambioFormulario = new EventEmitter<number>();
-  estado: Estado[] = [];
-  actividadEconomica: ActividadEconomica[] = [];
-  sede: Sede[] = [];
+
   epsAnterior: EpsAnterior[] = [];
   discapacidad: Discapacidad[] = [];
   departamento: Departamento[]= [];
-  dependencia: Dependencia[]= [];
   pais: Pais[]= [];
+  //ESTE SI - FALTA EL MUNICIPIO
   contributorDataForm: FormGroup;
 
   constructor(
@@ -86,16 +84,10 @@ export class ContributorDataComponent implements OnInit {
   getAffiliationData():void{
     this.mbsAplAffiliationDataService.getAffiliationData().subscribe((affiliationData: AffiliationDataDetail) => {
       console.log("este",affiliationData.datos);
-
-      // this.estado = affiliationData.estado;
-      // this.actividadEconomica = affiliationData.actividadEconomica;
-      // this.sede = affiliationData.sede;
       this.epsAnterior = affiliationData.datos.epsAnterior;
-      // this.discapacidad = affiliationData.discapacidad;
-      // this.departamento = affiliationData.departamento;
-      // this.dependencia = affiliationData.dependencia;
-      // this.pais = affiliationData.pais;
-
+      this.discapacidad = affiliationData.datos.discapacidad;
+      this.departamento = affiliationData.datos.departamento;
+      this.pais = affiliationData.datos.pais;
     });
   }
 

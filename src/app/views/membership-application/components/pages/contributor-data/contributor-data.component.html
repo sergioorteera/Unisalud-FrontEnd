@@ -86,9 +86,7 @@
           <div class="form-floating">
             <select class="form-select text-body" id="paisNacimiento" formControlName="paisNacimiento">
               <option value="null" selected disabled>Seleccionar respuesta</option>
-              <option value=""></option>
-              <option value=""></option>
-              <option value=""></option>
+              <option *ngFor="let p of pais" [value]="p.id">{{ p.descripcion }}</option>
             </select>
             <label class="text-body-small-sb">País de nacimiento</label>
           </div>
@@ -97,9 +95,7 @@
           <div class="form-floating">
             <select class="form-select text-body" id="deptNacimiento" formControlName="deptNacimiento">
               <option value="null" selected disabled>Seleccionar respuesta</option>
-              <option value=""></option>
-              <option value=""></option>
-              <option value=""></option>
+              <option *ngFor="let dept of departamento" [value]="dept.id">{{ dept.descripcion }}</option>
             </select>
             <label class="text-body-small-sb">Departamento de nacimiento</label>
           </div>
@@ -248,6 +244,9 @@
               <option value=""></option>
               <option value=""></option>
               <option value=""></option>
+              <option value="null" selected disabled>Seleccionar respuesta</option>
+              <!-- ESTO TOCA CAMBIARLO -->
+              <option *ngFor="let disFisica of discapacidad" [value]="disFisica.id">{{ disFisica.grado }}</option>
             </select>
             <label class="text-body-small-sb">Discapacidad física</label>
           </div>

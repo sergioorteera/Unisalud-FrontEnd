@@ -22,6 +22,7 @@ export interface EpsAnterior {
 export interface Discapacidad {
   id: number;
   descripcion: string;
+  grado: string;
 }
 
 export interface Departamento {
