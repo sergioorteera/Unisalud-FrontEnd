@@ -15,7 +15,6 @@ export class MembershipAreaDataComponent implements OnInit {
 
   @Output() cambioFormulario = new EventEmitter<number>();
   membershipAreaDataForm: FormGroup;
-  formSend:boolean = false;
   membershipAreaData: AreaAfiliaciones;
 
   constructor(
@@ -29,24 +28,23 @@ export class MembershipAreaDataComponent implements OnInit {
 
   initForm(): FormGroup {
     return (this.membershipAreaDataForm = this.formBuilder.group({
-      fechaIngreso: [null],
+      fechaIngresoSgsss: [null],
       tipoAfiliacion: [null],
       observaciones: [null],
     }));
   }
 
   onSaveMembershipAreaData(): void {
-    this.formSend = true;
     this.membershipAreaData = this.getMembershipAreaDataFromForm(this.membershipAreaDataForm);
     console.log(this.membershipAreaData);
     this.cambioFormulario.emit(2); //
   }
 
-  private getMembershipAreaDataFromForm(affiliationAreaDataForm: FormGroup): AreaAfiliaciones {
+  private getMembershipAreaDataFromForm(membershipAreaDataForm: FormGroup): AreaAfiliaciones {
     return new AreaAfiliaciones(
-      affiliationAreaDataForm.controls['fechaIngreso'].value,
-      affiliationAreaDataForm.controls['tipoAfiliacion'].value,
-      affiliationAreaDataForm.controls['observaciones'].value,
+      membershipAreaDataForm.controls['fechaIngresoSgsss'].value,
+      membershipAreaDataForm.controls['tipoAfiliacion'].value,
+      membershipAreaDataForm.controls['observaciones'].value,
     )
   }
 

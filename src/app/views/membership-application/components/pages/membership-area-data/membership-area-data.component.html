@@ -1,13 +1,13 @@
 <div class="container-fluid">
   <form [formGroup]="membershipAreaDataForm" (ngSubmit)="onSaveMembershipAreaData()">
     <div class="row">
-      <span class="title-page-form title-two">1. Información del área de afiliaciones de la unidad de salud</span>
+      <span class="title-two mb-4">1. Información del área de afiliaciones de la unidad de salud</span>
     </div>
 
-    <div class="row mb-3">
+    <div class="row mb-4">
       <div class="col-3">
         <div class="form-floating">
-          <input type="date" class="form-control text-body" id="fechaIngreso" formControlName="fechaIngreso">
+          <input type="date" class="form-control text-body" id="fechaIngresoSgsss" formControlName="fechaIngresoSgsss">
           <label class="text-body-small-sb" >Fecha ingreso al SGSSS</label>
         </div>
       </div>
@@ -27,11 +27,11 @@
       </div>
     </div>
 
-    <div class="row mb-3">
+    <div class="row mb-4">
       <div class="col-6">
         <div class="form-floating">
           <textarea class="form-control text-body" placeholder="Digitar respuesta" id="observaciones" formControlName="observaciones"></textarea>
-          <label class="text-body-small-sb">Observaciones</label>
+          <label class="text-body-small-sb label-textarea">Observaciones</label>
         </div>
       </div>
     </div>
@@ -42,8 +42,6 @@
       <button type="button" class="btn-custom-normal" (click)="onSaveMembershipAreaData()">Siguiente</button>
     </div>
 
-
   </form>
-
 
 </div>

@@ -1,22 +1,29 @@
 <div class="container-fluid">
 
-  <form [formGroup]="contributorDataForm" (ngSubmit)="onSaveMembershipAreaData()">
+  <form [formGroup]="contributorDataForm" (ngSubmit)="onSaveContributorData()">
 
     <div class="row">
-      <span class="title-page-form">2. Información del cotizante</span>
+      <span class="title-two mb-4">2. Información del cotizante</span>
     </div>
 
     <fieldset>
-      <legend class="title-three">Datos personales</legend>
-      <div class="row mb-3">
+      <legend class="title-three mb-4">Datos personales</legend>
+      <div class="row mb-4">
 
         <div class="col-3">
           <div class="form-floating">
             <select class="form-select text-body" id="tipoIdentificacion" formControlName="tipoIdentificacion">
               <option value="null" selected disabled>Seleccionar respuesta</option>
-              <option value=""></option>
-              <option value=""></option>
-              <option value=""></option>
+              <option value="CC">Cédula de ciudadanía</option>
+              <option value="TI">Tarjeta de identidad</option>
+              <option value="RC">Registro civil de nacimiento</option>
+              <option value="CE">Cédula de extranjería</option>
+              <option value="PT">Permiso de protección Temporal</option>
+              <option value="SC">Salvoconducto de permanencia</option>
+              <option value="PA">Pasaporte</option>
+              <option value="CD">Carné diplomático</option>
+              <option value="CN">Certificado de cacido vivo</option>
+              <option value="PE">Permiso especial de permanencia</option>
             </select>
             <label class="text-body-small-sb">Tipo de identificación</label>
           </div>
@@ -44,7 +51,7 @@
         </div>
       </div>
 
-      <div class="row mb-3">
+      <div class="row mb-4">
         <div class="col-3">
           <div class="form-floating">
             <input type="text" class="form-control text-body" id="primerApellido" placeholder="Digitar respuesta" formControlName="primerApellido">
@@ -70,15 +77,10 @@
           </div>
         </div>
       </div>
-      <div class="row mb-3">
+      <div class="row mb-4">
         <div class="col-3">
           <div class="form-floating">
-            <select class="form-select text-body" id="fechaNacimiento" formControlName="fechaNacimiento">
-              <option value="null" selected disabled>Seleccionar respuesta</option>
-              <option value=""></option>
-              <option value=""></option>
-              <option value=""></option>
-            </select>
+            <input type="date" class="form-control text-body" id="fechaNacimiento" formControlName="fechaNacimiento">
             <label class="text-body-small-sb">Fecha de nacimiento</label>
           </div>
         </div>
@@ -112,14 +114,17 @@
           </div>
         </div>
       </div>
-      <div class="row mb-3">
+      <div class="row mb-4">
         <div class="col-3">
           <div class="form-floating">
             <select class="form-select text-body" id="grupoEtnico" formControlName="grupoEtnico">
               <option value="null" selected disabled>Seleccionar respuesta</option>
-              <option value=""></option>
-              <option value=""></option>
-              <option value=""></option>
+              <option value="INDIGENA">Indígena</option>
+              <option value="ROM">Gitanos</option>
+              <option value="RAIZAL">Población del archipiélago de San Andrés y Providencia</option>
+              <option value="PALENQUERO_SAN_BASILIO">Palenquero de San Basilio</option>
+              <option value="AFRO">Negro, Mulato, Afrocolombiano o Afrodescendiente</option>
+              <option value="NINGUNA">Ninguna de las anteriores</option>
             </select>
             <label class="text-body-small-sb">Grupo étnico</label>
           </div>
@@ -128,9 +133,18 @@
           <div class="form-floating">
             <select class="form-select text-body" id="grupoPoblacional" formControlName="grupoPoblacional">
               <option value="null" selected disabled>Seleccionar respuesta</option>
-              <option value=""></option>
-              <option value=""></option>
-              <option value=""></option>
+              <option value="C2">Población infantil abandonada a cargo del instituto colombiano de bienestar familiar</option>
+              <option value="C6">Menores desvinculados del conflicto</option>
+              <option value="C8">Población desmovilizada</option>
+              <option value="C9">Víctimas del conflicto armado</option>
+              <option value="C10">Población infantil vulnerable bajo protección en instituciones diferentes al ICBF</option>
+              <option value="C11">Personas incluidas en el programa de protección a testigos</option>
+              <option value="C16">Adultos mayores en centros de protección</option>
+              <option value="C17">Comunidades indígenas</option>
+              <option value="C18">Población ROM</option>
+              <option value="C22">Población privada de la libertad</option>
+              <option value="C23">Personas que dejen de ser madres comunitarias y sean beneficiarias del subsidio de la subcuenta de subsistencia del fondo de solidaridad pensional</option>
+              <option value="OTRO">Otro</option>
             </select>
             <label class="text-body-small-sb">Grupo poblacional</label>
           </div>
@@ -139,9 +153,8 @@
           <div class="form-floating">
             <select class="form-select text-body" id="sexo" formControlName="sexo">
               <option value="null" selected disabled>Seleccionar respuesta</option>
-              <option value=""></option>
-              <option value=""></option>
-              <option value=""></option>
+              <option value="F">Femenino</option>
+              <option value="M">Másculino</option>
             </select>
             <label class="text-body-small-sb">Sexo</label>
           </div>
@@ -150,22 +163,26 @@
           <div class="form-floating">
             <select class="form-select text-body" id="orientacionSexual" formControlName="orientacionSexual">
               <option value="null" selected disabled>Seleccionar respuesta</option>
-              <option value=""></option>
-              <option value=""></option>
-              <option value=""></option>
+              <option value="BISEXUAL">Bisexual</option>
+              <option value="HETEROSEXUAL">Heterosexual</option>
+              <option value="HOMOSEXUAL">Homosexual</option>
+              <option value="No_SABE_NO_RESPONSE">No sabe, no responde</option>
+              <option value="OTRO">Otro</option>
             </select>
             <label class="text-body-small-sb">Orientación sexual</label>
           </div>
         </div>
       </div>
-      <div class="row mb-3">
+      <div class="row mb-5">
         <div class="col-3">
           <div class="form-floating">
             <select class="form-select text-body" id="estadoCivil" formControlName="estadoCivil">
               <option value="null" selected disabled>Seleccionar respuesta</option>
-              <option value=""></option>
-              <option value=""></option>
-              <option value=""></option>
+              <option value="SOLTERO">Soltero</option>
+              <option value="CASADO">Casado</option>
+              <option value="DIVORCIADO">Divorciado</option>
+              <option value="VIUDO">Viudo</option>
+              <option value="COMPANERO_PERMANENTE">Compañero permanente</option>
             </select>
             <label class="text-body-small-sb">Estado civil</label>
           </div>
@@ -174,9 +191,19 @@
           <div class="form-floating">
             <select class="form-select text-body" id="escolaridad" formControlName="escolaridad">
               <option value="null" selected disabled>Seleccionar respuesta</option>
-              <option value=""></option>
-              <option value=""></option>
-              <option value=""></option>
+              <option value="C01">Preescolar</option>
+              <option value="C02">Básica primaria</option>
+              <option value="C03">Básica secundaria con bachillerato básico</option>
+              <option value="C04">Media académica o clásica</option>
+              <option value="C05">Media técnica</option>
+              <option value="C06">Normalista</option>
+              <option value="C07">Técnica profesional</option>
+              <option value="C08">Técnica</option>
+              <option value="C09">Profesional</option>
+              <option value="C10">Especialización</option>
+              <option value="C11">Maestría</option>
+              <option value="C12">Doctorado</option>
+              <option value="C13">Ninguno</option>
             </select>
             <label class="text-body-small-sb">Escolaridad</label>
           </div>
@@ -191,8 +218,8 @@
     </fieldset>
 
     <fieldset>
-      <legend class="title-three">Datos de salud</legend>
-      <div class="row mb-3">
+      <legend class="title-three mb-4">Datos de salud</legend>
+      <div class="row mb-4">
         <div class="col-3">
           <div class="form-floating">
             <select class="form-select text-body" id="epsAnterior" formControlName="epsAnterior">
@@ -206,9 +233,9 @@
           <div class="form-floating">
             <select class="form-select text-body" id="regimen" formControlName="regimen">
               <option value="null" selected disabled>Seleccionar respuesta</option>
-              <option value=""></option>
-              <option value=""></option>
-              <option value=""></option>
+              <option value="CONTRIBUTIVO">Contributivo</option>
+              <option value="SUBSIDIADO">Subsidiado</option>
+              <option value="EXPECIAL">Especial</option>
             </select>
             <label class="text-body-small-sb">Régimen</label>
           </div>
@@ -217,9 +244,10 @@
           <div class="form-floating">
             <select class="form-select text-body" id="tipoSangre" formControlName="tipoSangre">
               <option value="null" selected disabled>Seleccionar respuesta</option>
-              <option value=""></option>
-              <option value=""></option>
-              <option value=""></option>
+              <option value="A">A</option>
+              <option value="O">O</option>
+              <option value="B">B</option>
+              <option value="AB">AB</option>
             </select>
             <label class="text-body-small-sb">Tipo de sangre</label>
           </div>
@@ -228,9 +256,8 @@
           <div class="form-floating">
             <select class="form-select text-body" id="rh" formControlName="rh">
               <option value="null" selected disabled>Seleccionar respuesta</option>
-              <option value=""></option>
-              <option value=""></option>
-              <option value=""></option>
+              <option value="POSITIVO">Positivo</option>
+              <option value="NEGATIVO">Negativo</option>
             </select>
             <label class="text-body-small-sb">RH</label>
           </div>
@@ -285,14 +312,14 @@
           </div>
         </div>
       </div>
-      <div class="row mb-3">
+      <div class="row mb-5">
         <div class="col-3">
           <div class="form-floating">
             <select class="form-select text-body" id="planComplementario" formControlName="planComplementario">
               <option value="null" selected disabled>Seleccionar respuesta</option>
-              <option value=""></option>
-              <option value=""></option>
-              <option value=""></option>
+              <option value="ACTIVO">Activo</option>
+              <option value="INACTIVO">Inactivo</option>
+              <option value="NO_APLICA">No aplica</option>
             </select>
             <label class="text-body-small-sb">Plan complementario</label>
           </div>
@@ -301,8 +328,8 @@
     </fieldset>
 
     <fieldset>
-      <legend class="title-three">Datos de ubicación y contacto</legend>
-      <div class="row mb-3">
+      <legend class="title-three mb-4">Datos de ubicación y contacto</legend>
+      <div class="row mb-4">
         <div class="col-3">
           <div class="form-floating">
             <select class="form-select text-body" id="deptResidencia" formControlName="deptResidencia">
@@ -332,7 +359,7 @@
           </div>
         </div>
       </div>
-      <div class="row mb-3">
+      <div class="row mb-4">
         <div class="col-3">
           <div class="form-floating">
             <input type="text" class="form-control text-body" id="barrio" placeholder="Digitar respuesta" formControlName="barrio">
@@ -343,9 +370,8 @@
           <div class="form-floating">
             <select class="form-select text-body" id="zona" formControlName="zona">
               <option value="null" selected disabled>Seleccionar respuesta</option>
-              <option value=""></option>
-              <option value=""></option>
-              <option value=""></option>
+              <option value="URBANA">Urbana</option>
+              <option value="RURAL">Rural</option>
             </select>
             <label class="text-body-small-sb">Zona</label>
           </div>
@@ -354,9 +380,12 @@
           <div class="form-floating">
             <select class="form-select text-body" id="estrato" formControlName="estrato">
               <option value="null" selected disabled>Seleccionar respuesta</option>
-              <option value=""></option>
-              <option value=""></option>
-              <option value=""></option>
+              <option value="C01">Bajo bajo</option>
+              <option value="C02">Bajo</option>
+              <option value="C03">Medio bajo</option>
+              <option value="C04">Medio</option>
+              <option value="C05">Medio Alto</option>
+              <option value="C06">Alto</option>
             </select>
             <label class="text-body-small-sb">Estrato</label>
           </div>
@@ -368,7 +397,7 @@
           </div>
         </div>
       </div>
-      <div class="row mb-3">
+      <div class="row mb-5">
         <div class="col-3">
           <div class="form-floating">
             <input type="text" class="form-control text-body" id="telefono" placeholder="Digitar respuesta" formControlName="telefono">
@@ -391,8 +420,8 @@
     </fieldset>
 
     <fieldset>
-      <legend class="title-three">Datos de contacto de emergencia</legend>
-      <div class="row mb-3">
+      <legend class="title-three mb-3">Datos de contacto de emergencia</legend>
+      <div class="row mb-5">
         <div class="col-3">
           <div class="form-floating">
             <input type="text" class="form-control text-body" id="nombreEmer" placeholder="Digitar respuesta" formControlName="nombreEmer">
@@ -421,8 +450,11 @@
     </fieldset>
 
     <fieldset>
-      <legend class="title-three">Carga de archivos</legend>
-      <div class="row mb-3">
+      <legend class="title-three mb-3">Carga de archivos</legend>
+      <span class="text-body-custom">Los campos de carga de archivo para discapacidad y grupo étnico
+        sólo estarán disponibles si se elige una opción diferente a ‘‘No aplica’’ en los campos correspondientes.
+      </span>
+      <div class="row mb-2">
         <div class="col-3">
 
         </div>
@@ -443,7 +475,7 @@
     <div class="button-container">
       <button (click)="irAFormulario(1)" type="button" class="btn-custom-normal">Atrás</button>
       <button type="button" class="btn-custom-normal mx-3 text-body-heavy">Cancelar</button>
-      <button (click)="irAFormulario(3)" type="submit" class="btn-custom-normal">Siguiente</button>
+      <button type="submit" class="btn-custom-normal" (click)="onSaveContributorData()">Siguiente</button>
     </div>
 
   </form>

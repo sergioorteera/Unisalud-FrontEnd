@@ -3,21 +3,23 @@
   <ul class="nav nav-tabs" id="myTab" role="tablist">
 
     <li class="nav-item" role="presentation">
-      <a class="nav-item nav-link navOne disabled">
+      <a class="nav-item nav-link navOne disabled" [ngClass]="{ 'active-tab': formularioActual === 1 }">
         <span class="text-body-small-sb">Datos del área de afiliaciones</span>
       </a>
+
+
     </li>
     <li class="nav-item" role="presentation">
-      <a class="nav-item nav-link navTwo disabled">
+      <a class="nav-item nav-link navTwo disabled" [ngClass]="{ 'active-tab': formularioActual === 2 }">
         <span class="text-body-small-sb">Datos del cotizante</span>
       </a>
     </li>
     <li class="nav-item" role="presentation">
-      <a class="nav-item nav-link navThree disabled">
+      <a class="nav-item nav-link navThree disabled" [ngClass]="{ 'active-tab': formularioActual === 3 }">
         <span class="text-body-small-sb">Gestión grupo familiar</span>
       </a>
     </li>
-    <li class="nav-item" role="presentation">
+    <li class="nav-item" role="presentation" [ngClass]="{ 'active-tab': formularioActual === 4 }">
       <a class="nav-item nav-link navFour disabled">
         <span class="text-body-small-sb">Datos del empleador</span>
       </a>

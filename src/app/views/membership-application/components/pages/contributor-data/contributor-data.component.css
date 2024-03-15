@@ -8,20 +8,17 @@
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
 }
-
-.title-page-form{
-  font-family: "FiraSans-Bold";
-  font-size: 32px;
-  color: var(--blue);
-  padding-bottom: 50px;
-}
-
 .button-container {
   display: flex;
   justify-content: center;
   background-color: var(--white);
 }
-
+.text-body{
+  color: grenn;
+}
+.form-select option:hover {
+  background-color: #ddd;
+}
 /* FORMS */
 
 /* estilos label */
