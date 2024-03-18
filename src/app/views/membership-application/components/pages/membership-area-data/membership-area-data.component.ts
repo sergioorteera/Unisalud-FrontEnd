@@ -30,7 +30,7 @@ export class MembershipAreaDataComponent implements OnInit {
     return (this.membershipAreaDataForm = this.formBuilder.group({
       fechaIngresoSgsss: [null],
       tipoAfiliacion: [null],
-      observaciones: [null],
+      observacion: [null],
     }));
   }
 
@@ -44,7 +44,7 @@ export class MembershipAreaDataComponent implements OnInit {
     return new AreaAfiliaciones(
       membershipAreaDataForm.controls['fechaIngresoSgsss'].value,
       membershipAreaDataForm.controls['tipoAfiliacion'].value,
-      membershipAreaDataForm.controls['observaciones'].value,
+      membershipAreaDataForm.controls['observacion'].value,
     )
   }
 

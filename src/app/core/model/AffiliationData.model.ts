@@ -1,4 +1,4 @@
-
+//GET PARA LOS SELECTORES DEL FORMULARIO DE AFILIACIÓN
 export interface Estado {
   id: number;
   descripcion: string;
@@ -66,7 +66,7 @@ export interface AffiliationDataDetail {
 
 
 
-//AFILIACION COMPLETA
+//AFILIACION COMPLETA - ARMAR JSON
 export class AffiliationData {
   [key: string]: any;
   constructor(
@@ -88,7 +88,7 @@ export class DatosCotizante {
   [key: string]: any;
   constructor(
     public tipoIdentificacion: string = '',
-    public numeroIdentificacion: string = '',
+    public numeroDocumento: string = '',
     public fechaExpedicion: Date,
     public fechaVencimiento: Date,
     public primerApellido: string = '',
@@ -96,9 +96,9 @@ export class DatosCotizante {
     public primerNombre: string = '',
     public segundoNombre: string = '',
     public fechaNacimiento: Date,
-    public paisNacimiento: number = 0,
-    public deptNacimiento: number = 0,
-    public ciudadNacimiento: number = 0,
+    public idPais: number = 0,
+    public deptNacimiento: number = 0, //ESTE DATO NO SE ENVÍA
+    public idMunicipioNacimiento: number = 0,
     public grupoEtnico: string = '',
     public grupoPoblacional: string = '',
     public sexo: string = '',
@@ -106,29 +106,28 @@ export class DatosCotizante {
     public estadoCivil: string = '',
     public escolaridad: string = '',
     public profesion: string = '',
-    public epsAnterior: number = 0,
+    public idEpsAnterior: number = 0,
     public regimen: string = '',
     public tipoSangre: string = '',
-    public rh: string = '',
+    public tipoRh: string = '',
     public discapacidadFisica: number = 0,
     public discapacidadVisual: number = 0,
     public discapacidadCognitiva: number = 0,
     public discapacidadAuditiva: number = 0,
-    public planComplementario: string = '',
-    public deptResidencia: number = 0,
-    public ciudadResidencia: number = 0,
-    public direccionResidencia: string = '',
+    public deptResidencia: number = 0, //ESTE DATO NO SE ENVÍA
+    public idMunicipioUbicacion: number = 0,
+    public direccion: string = '',
     public barrio: string = '',
     public zona: string = '',
     public estrato: string = '',
     public celular: string = '',
     public telefono: string = '',
-    public correo: string = '',
-    public correoAlternativo: string = '',
-    public nombreEmer: string = '',
-    public direccionEmer: string = '',
-    public telefonoEmer: string = '',
-    public celularEmer: string = ''
+    public correoElectronico: string = '',
+    public correoElectronicoAlternativo: string = '',
+    public nombreContactoEmergencia: string = '',
+    public direccionContactoEmergencia: string = '',
+    public telefonoContactoEmergencia: string = '',
+    public celularContactoEmergencia: string = ''
   ) {}
 }
 

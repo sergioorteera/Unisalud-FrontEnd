@@ -16,9 +16,18 @@
 .text-body{
   color: grenn;
 }
-.form-select option:hover {
-  background-color: #ddd;
+
+
+.form-select {
+  max-width: 300px; /* Ajusta el ancho según tu diseño */
 }
+
+.form-select option {
+  text-overflow: ellipsis; /* Muestra puntos suspensivos al final del texto */
+  white-space: nowrap; /* Evita que el texto se ajuste a la siguiente línea */
+}
+
+
 /* FORMS */
 
 /* estilos label */

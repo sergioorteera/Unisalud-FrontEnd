@@ -14,16 +14,16 @@
           <div class="form-floating">
             <select class="form-select text-body" id="tipoIdentificacion" formControlName="tipoIdentificacion">
               <option value="null" selected disabled>Seleccionar respuesta</option>
-              <option value="CC">Cédula de ciudadanía</option>
-              <option value="TI">Tarjeta de identidad</option>
-              <option value="RC">Registro civil de nacimiento</option>
-              <option value="CE">Cédula de extranjería</option>
-              <option value="PT">Permiso de protección Temporal</option>
-              <option value="SC">Salvoconducto de permanencia</option>
-              <option value="PA">Pasaporte</option>
-              <option value="CD">Carné diplomático</option>
-              <option value="CN">Certificado de cacido vivo</option>
-              <option value="PE">Permiso especial de permanencia</option>
+              <option value="C0">Cédula de ciudadanía</option>
+              <option value="C1">Tarjeta de identidad</option>
+              <option value="C2">Registro civil de nacimiento</option>
+              <option value="C3">Cédula de extranjería</option>
+              <option value="C4">Permiso de protección Temporal</option>
+              <option value="C5">Salvoconducto de permanencia</option>
+              <option value="C6">Pasaporte</option>
+              <option value="C7">Carné diplomático</option>
+              <option value="C8">Certificado de cacido vivo</option>
+              <option value="C9">Permiso especial de permanencia</option>
             </select>
             <label class="text-body-small-sb">Tipo de identificación</label>
           </div>
@@ -31,7 +31,7 @@
 
         <div class="col-3">
           <div class="form-floating">
-            <input type="text" class="form-control text-body" id="numeroIdentificacion" placeholder="Digitar respuesta" formControlName="numeroIdentificacion">
+            <input type="text" class="form-control text-body" id="numeroDocumento" placeholder="Digitar respuesta" formControlName="numeroDocumento">
             <label class="text-body-small-sb">Número de identificación</label>
           </div>
         </div>
@@ -60,7 +60,7 @@
         </div>
         <div class="col-3">
           <div class="form-floating">
-            <input type="text" class="form-control text-body" id="segundoApeliido" placeholder="Digitar respuesta" formControlName="segundoApeliido">
+            <input type="text" class="form-control text-body" id="segundoApellido" placeholder="Digitar respuesta" formControlName="segundoApellido">
             <label class="text-body-small-sb">Segundo apellido</label>
           </div>
         </div>
@@ -72,7 +72,7 @@
         </div>
         <div class="col-3">
           <div class="form-floating">
-            <input type="text" class="form-control text-body" id="SegundoNombre" placeholder="Digitar respuesta" formControlName="SegundoNombre">
+            <input type="text" class="form-control text-body" id="segundoNombre" placeholder="Digitar respuesta" formControlName="segundoNombre">
             <label class="text-body-small-sb">Segundo nombre</label>
           </div>
         </div>
@@ -86,7 +86,7 @@
         </div>
         <div class="col-3">
           <div class="form-floating">
-            <select class="form-select text-body" id="paisNacimiento" formControlName="paisNacimiento">
+            <select class="form-select text-body" id="idPais" formControlName="idPais">
               <option value="null" selected disabled>Seleccionar respuesta</option>
               <option *ngFor="let p of pais" [value]="p.id">{{ p.descripcion }}</option>
             </select>
@@ -97,14 +97,16 @@
           <div class="form-floating">
             <select class="form-select text-body" id="deptNacimiento" formControlName="deptNacimiento">
               <option value="null" selected disabled>Seleccionar respuesta</option>
-              <option *ngFor="let dept of departamento" [value]="dept.id">{{ dept.descripcion }}</option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
             </select>
             <label class="text-body-small-sb">Departamento de nacimiento</label>
           </div>
         </div>
         <div class="col-3">
           <div class="form-floating">
-            <select class="form-select text-body" id="ciudadNacimiento" formControlName="ciudadNacimiento">
+            <select class="form-select text-body" id="idMunicipioNacimiento" formControlName="idMunicipioNacimiento">
               <option value="null" selected disabled>Seleccionar respuesta</option>
               <option value=""></option>
               <option value=""></option>
@@ -222,7 +224,7 @@
       <div class="row mb-4">
         <div class="col-3">
           <div class="form-floating">
-            <select class="form-select text-body" id="epsAnterior" formControlName="epsAnterior">
+            <select class="form-select text-body" id="idEpsAnterior" formControlName="idEpsAnterior">
               <option value="null" selected disabled>Seleccionar respuesta</option>
               <option *ngFor="let eps of epsAnterior" [value]="eps.id">{{ eps.descripcion }}</option>
             </select>
@@ -254,7 +256,7 @@
         </div>
         <div class="col-3">
           <div class="form-floating">
-            <select class="form-select text-body" id="rh" formControlName="rh">
+            <select class="form-select text-body" id="tipoRh" formControlName="tipoRh">
               <option value="null" selected disabled>Seleccionar respuesta</option>
               <option value="POSITIVO">Positivo</option>
               <option value="NEGATIVO">Negativo</option>
@@ -314,8 +316,9 @@
       </div>
       <div class="row mb-5">
         <div class="col-3">
+          <!-- ESTE CAMPO TOCA DESHABILITARLO -->
           <div class="form-floating">
-            <select class="form-select text-body" id="planComplementario" formControlName="planComplementario">
+            <select class="form-select text-body" id="planComplementario">
               <option value="null" selected disabled>Seleccionar respuesta</option>
               <option value="ACTIVO">Activo</option>
               <option value="INACTIVO">Inactivo</option>
@@ -343,7 +346,7 @@
         </div>
         <div class="col-3">
           <div class="form-floating">
-            <select class="form-select text-body" id="ciudadResidencia" formControlName="ciudadResidencia">
+            <select class="form-select text-body" id="idMunicipioUbicacion" formControlName="idMunicipioUbicacion">
               <option value="null" selected disabled>Seleccionar respuesta</option>
               <option value=""></option>
               <option value=""></option>
@@ -354,7 +357,7 @@
         </div>
         <div class="col-6">
           <div class="form-floating">
-            <input type="text" class="form-control text-body" id="direccionResidencia" placeholder="Digitar respuesta" formControlName="direccionResidencia">
+            <input type="text" class="form-control text-body" id="direccion" placeholder="Digitar respuesta" formControlName="direccion">
             <label class="text-body-small-sb">Dirección de residencia</label>
           </div>
         </div>
@@ -406,13 +409,13 @@
         </div>
         <div class="col-3">
           <div class="form-floating">
-            <input type="text" class="form-control text-body" id="correo" placeholder="Digitar respuesta" formControlName="correo">
+            <input type="text" class="form-control text-body" id="correoElectronico" placeholder="Digitar respuesta" formControlName="correoElectronico">
             <label class="text-body-small-sb">Correo electrónico</label>
           </div>
         </div>
         <div class="col-3">
           <div class="form-floating">
-            <input type="text" class="form-control text-body" id="correoAlternativo" placeholder="Digitar respuesta" formControlName="correoAlternativo">
+            <input type="text" class="form-control text-body" id="correoElectronicoAlternativo" placeholder="Digitar respuesta" formControlName="correoElectronicoAlternativo">
             <label class="text-body-small-sb">Correo electrónico alternativo</label>
           </div>
         </div>
@@ -424,25 +427,25 @@
       <div class="row mb-5">
         <div class="col-3">
           <div class="form-floating">
-            <input type="text" class="form-control text-body" id="nombreEmer" placeholder="Digitar respuesta" formControlName="nombreEmer">
+            <input type="text" class="form-control text-body" id="nombreContactoEmergencia" placeholder="Digitar respuesta" formControlName="nombreContactoEmergencia">
             <label class="text-body-small-sb">Nombre completo</label>
           </div>
         </div>
         <div class="col-3">
           <div class="form-floating">
-            <input type="text" class="form-control text-body" id="direccionEmer" placeholder="Digitar respuesta" formControlName="direccionEmer">
+            <input type="text" class="form-control text-body" id="direccionContactoEmergencia" placeholder="Digitar respuesta" formControlName="direccionContactoEmergencia">
             <label class="text-body-small-sb">Dirección</label>
           </div>
         </div>
         <div class="col-3">
           <div class="form-floating">
-            <input type="text" class="form-control text-body" id="telefonoEmer" placeholder="Digitar respuesta" formControlName="telefonoEmer">
+            <input type="text" class="form-control text-body" id="telefonoContactoEmergencia" placeholder="Digitar respuesta" formControlName="telefonoContactoEmergencia">
             <label class="text-body-small-sb">Teléfono</label>
           </div>
         </div>
         <div class="col-3">
           <div class="form-floating">
-            <input type="text" class="form-control text-body" id="celularEmer" placeholder="Digitar respuesta" formControlName="celularEmer">
+            <input type="text" class="form-control text-body" id="celularContactoEmergencia" placeholder="Digitar respuesta" formControlName="celularContactoEmergencia">
             <label class="text-body-small-sb">Celular</label>
           </div>
         </div>
