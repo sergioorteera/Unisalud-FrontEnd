@@ -88,18 +88,16 @@
           <div class="form-floating">
             <select class="form-select text-body" id="idPais" formControlName="idPais">
               <option value="null" selected disabled>Seleccionar respuesta</option>
-              <option *ngFor="let p of pais" [value]="p.id">{{ p.descripcion }}</option>
+              <option *ngFor="let country of countries" [value]="country.id">{{ country.descripcion }}</option>
             </select>
             <label class="text-body-small-sb">País de nacimiento</label>
           </div>
         </div>
         <div class="col-3">
           <div class="form-floating">
-            <select class="form-select text-body" id="deptNacimiento" formControlName="deptNacimiento">
+            <select class="form-select text-body" id="deptNacimiento" formControlName="deptNacimiento" (change)="onBirthDepartmentChange(contributorDataForm.value.deptNacimiento)">
               <option value="null" selected disabled>Seleccionar respuesta</option>
-              <option value=""></option>
-              <option value=""></option>
-              <option value=""></option>
+              <option *ngFor="let department of departments" [value]="department.id">{{ department.descripcion }}</option>
             </select>
             <label class="text-body-small-sb">Departamento de nacimiento</label>
           </div>
@@ -108,9 +106,7 @@
           <div class="form-floating">
             <select class="form-select text-body" id="idMunicipioNacimiento" formControlName="idMunicipioNacimiento">
               <option value="null" selected disabled>Seleccionar respuesta</option>
-              <option value=""></option>
-              <option value=""></option>
-              <option value=""></option>
+              <option *ngFor="let municipality of birthMunicipalitiesFiltered" [value]="municipality.id">{{ municipality.descripcion }}</option>
             </select>
             <label class="text-body-small-sb">Ciudad de nacimiento</label>
           </div>
@@ -121,12 +117,12 @@
           <div class="form-floating">
             <select class="form-select text-body" id="grupoEtnico" formControlName="grupoEtnico">
               <option value="null" selected disabled>Seleccionar respuesta</option>
-              <option value="INDIGENA">Indígena</option>
-              <option value="ROM">Gitanos</option>
-              <option value="RAIZAL">Población del archipiélago de San Andrés y Providencia</option>
-              <option value="PALENQUERO_SAN_BASILIO">Palenquero de San Basilio</option>
-              <option value="AFRO">Negro, Mulato, Afrocolombiano o Afrodescendiente</option>
-              <option value="NINGUNA">Ninguna de las anteriores</option>
+              <option value="C0">Indígena</option>
+              <option value="C1">Gitanos</option>
+              <option value="C2">Población del archipiélago de San Andrés y Providencia</option>
+              <option value="C3">Palenquero de San Basilio</option>
+              <option value="C4">Negro, Mulato, Afrocolombiano o Afrodescendiente</option>
+              <option value="C5">Ninguna de las anteriores</option>
             </select>
             <label class="text-body-small-sb">Grupo étnico</label>
           </div>
@@ -135,18 +131,18 @@
           <div class="form-floating">
             <select class="form-select text-body" id="grupoPoblacional" formControlName="grupoPoblacional">
               <option value="null" selected disabled>Seleccionar respuesta</option>
-              <option value="C2">Población infantil abandonada a cargo del instituto colombiano de bienestar familiar</option>
-              <option value="C6">Menores desvinculados del conflicto</option>
-              <option value="C8">Población desmovilizada</option>
-              <option value="C9">Víctimas del conflicto armado</option>
-              <option value="C10">Población infantil vulnerable bajo protección en instituciones diferentes al ICBF</option>
-              <option value="C11">Personas incluidas en el programa de protección a testigos</option>
-              <option value="C16">Adultos mayores en centros de protección</option>
-              <option value="C17">Comunidades indígenas</option>
-              <option value="C18">Población ROM</option>
-              <option value="C22">Población privada de la libertad</option>
-              <option value="C23">Personas que dejen de ser madres comunitarias y sean beneficiarias del subsidio de la subcuenta de subsistencia del fondo de solidaridad pensional</option>
-              <option value="OTRO">Otro</option>
+              <option value="C0">Población infantil abandonada a cargo del instituto colombiano de bienestar familiar</option>
+              <option value="C1">Menores desvinculados del conflicto</option>
+              <option value="C2">Población desmovilizada</option>
+              <option value="C3">Víctimas del conflicto armado</option>
+              <option value="C4">Población infantil vulnerable bajo protección en instituciones diferentes al ICBF</option>
+              <option value="C5">Personas incluidas en el programa de protección a testigos</option>
+              <option value="C6">Adultos mayores en centros de protección</option>
+              <option value="C7">Comunidades indígenas</option>
+              <option value="C8">Población ROM</option>
+              <option value="C9">Población privada de la libertad</option>
+              <option value="C10">Personas que dejen de ser madres comunitarias y sean beneficiarias del subsidio de la subcuenta de subsistencia del fondo de solidaridad pensional</option>
+              <option value="C11">Otro</option>
             </select>
             <label class="text-body-small-sb">Grupo poblacional</label>
           </div>
@@ -155,8 +151,8 @@
           <div class="form-floating">
             <select class="form-select text-body" id="sexo" formControlName="sexo">
               <option value="null" selected disabled>Seleccionar respuesta</option>
-              <option value="F">Femenino</option>
-              <option value="M">Másculino</option>
+              <option value="C0">Femenino</option>
+              <option value="C1">Másculino</option>
             </select>
             <label class="text-body-small-sb">Sexo</label>
           </div>
@@ -165,11 +161,11 @@
           <div class="form-floating">
             <select class="form-select text-body" id="orientacionSexual" formControlName="orientacionSexual">
               <option value="null" selected disabled>Seleccionar respuesta</option>
-              <option value="BISEXUAL">Bisexual</option>
-              <option value="HETEROSEXUAL">Heterosexual</option>
-              <option value="HOMOSEXUAL">Homosexual</option>
-              <option value="No_SABE_NO_RESPONSE">No sabe, no responde</option>
-              <option value="OTRO">Otro</option>
+              <option value="C1">Bisexual</option>
+              <option value="C2">Heterosexual</option>
+              <option value="C3">Homosexual</option>
+              <option value="C4">No sabe, no responde</option>
+              <option value="C5">Otro</option>
             </select>
             <label class="text-body-small-sb">Orientación sexual</label>
           </div>
@@ -180,11 +176,11 @@
           <div class="form-floating">
             <select class="form-select text-body" id="estadoCivil" formControlName="estadoCivil">
               <option value="null" selected disabled>Seleccionar respuesta</option>
-              <option value="SOLTERO">Soltero</option>
-              <option value="CASADO">Casado</option>
-              <option value="DIVORCIADO">Divorciado</option>
-              <option value="VIUDO">Viudo</option>
-              <option value="COMPANERO_PERMANENTE">Compañero permanente</option>
+              <option value="C1">Soltero</option>
+              <option value="C2">Casado</option>
+              <option value="C3">Divorciado</option>
+              <option value="C4">Viudo</option>
+              <option value="C5">Compañero permanente</option>
             </select>
             <label class="text-body-small-sb">Estado civil</label>
           </div>
@@ -193,19 +189,19 @@
           <div class="form-floating">
             <select class="form-select text-body" id="escolaridad" formControlName="escolaridad">
               <option value="null" selected disabled>Seleccionar respuesta</option>
-              <option value="C01">Preescolar</option>
-              <option value="C02">Básica primaria</option>
-              <option value="C03">Básica secundaria con bachillerato básico</option>
-              <option value="C04">Media académica o clásica</option>
-              <option value="C05">Media técnica</option>
-              <option value="C06">Normalista</option>
-              <option value="C07">Técnica profesional</option>
-              <option value="C08">Técnica</option>
-              <option value="C09">Profesional</option>
-              <option value="C10">Especialización</option>
-              <option value="C11">Maestría</option>
-              <option value="C12">Doctorado</option>
-              <option value="C13">Ninguno</option>
+              <option value="C0">Preescolar</option>
+              <option value="C1">Básica primaria</option>
+              <option value="C2">Básica secundaria con bachillerato básico</option>
+              <option value="C3">Media académica o clásica</option>
+              <option value="C4">Media técnica</option>
+              <option value="C5">Normalista</option>
+              <option value="C6">Técnica profesional</option>
+              <option value="C7">Técnica</option>
+              <option value="C8">Profesional</option>
+              <option value="C9">Especialización</option>
+              <option value="C10">Maestría</option>
+              <option value="C11">Doctorado</option>
+              <option value="C12">Ninguno</option>
             </select>
             <label class="text-body-small-sb">Escolaridad</label>
           </div>
@@ -226,7 +222,7 @@
           <div class="form-floating">
             <select class="form-select text-body" id="idEpsAnterior" formControlName="idEpsAnterior">
               <option value="null" selected disabled>Seleccionar respuesta</option>
-              <option *ngFor="let eps of epsAnterior" [value]="eps.id">{{ eps.descripcion }}</option>
+              <option *ngFor="let eps of previusEps" [value]="eps.id">{{ eps.descripcion }}</option>
             </select>
             <label class="text-body-small-sb">Eps anterior</label>
           </div>
@@ -235,9 +231,9 @@
           <div class="form-floating">
             <select class="form-select text-body" id="regimen" formControlName="regimen">
               <option value="null" selected disabled>Seleccionar respuesta</option>
-              <option value="CONTRIBUTIVO">Contributivo</option>
-              <option value="SUBSIDIADO">Subsidiado</option>
-              <option value="EXPECIAL">Especial</option>
+              <option value="C0">Contributivo</option>
+              <option value="C1">Subsidiado</option>
+              <option value="C2">Especial</option>
             </select>
             <label class="text-body-small-sb">Régimen</label>
           </div>
@@ -258,8 +254,8 @@
           <div class="form-floating">
             <select class="form-select text-body" id="tipoRh" formControlName="tipoRh">
               <option value="null" selected disabled>Seleccionar respuesta</option>
-              <option value="POSITIVO">Positivo</option>
-              <option value="NEGATIVO">Negativo</option>
+              <option value="C0">Positivo</option>
+              <option value="C1">Negativo</option>
             </select>
             <label class="text-body-small-sb">RH</label>
           </div>
@@ -335,11 +331,9 @@
       <div class="row mb-4">
         <div class="col-3">
           <div class="form-floating">
-            <select class="form-select text-body" id="deptResidencia" formControlName="deptResidencia">
+            <select class="form-select text-body" id="deptResidencia" formControlName="deptResidencia" (change)="onResidenceDepartmentChange(contributorDataForm.value.deptResidencia)">
               <option value="null" selected disabled>Seleccionar respuesta</option>
-              <option value=""></option>
-              <option value=""></option>
-              <option value=""></option>
+              <option *ngFor="let department of departments" [value]="department.id">{{ department.descripcion }}</option>
             </select>
             <label class="text-body-small-sb">Departamento de residencia</label>
           </div>
@@ -348,9 +342,7 @@
           <div class="form-floating">
             <select class="form-select text-body" id="idMunicipioUbicacion" formControlName="idMunicipioUbicacion">
               <option value="null" selected disabled>Seleccionar respuesta</option>
-              <option value=""></option>
-              <option value=""></option>
-              <option value=""></option>
+              <option *ngFor="let municipality of residenceMunicipalitiesFiltered" [value]="municipality.id">{{ municipality.descripcion }}</option>
             </select>
             <label class="text-body-small-sb">Ciudad de residencia</label>
           </div>
@@ -373,8 +365,8 @@
           <div class="form-floating">
             <select class="form-select text-body" id="zona" formControlName="zona">
               <option value="null" selected disabled>Seleccionar respuesta</option>
-              <option value="URBANA">Urbana</option>
-              <option value="RURAL">Rural</option>
+              <option value="C0">Urbana</option>
+              <option value="C1">Rural</option>
             </select>
             <label class="text-body-small-sb">Zona</label>
           </div>
@@ -383,12 +375,12 @@
           <div class="form-floating">
             <select class="form-select text-body" id="estrato" formControlName="estrato">
               <option value="null" selected disabled>Seleccionar respuesta</option>
-              <option value="C01">Bajo bajo</option>
-              <option value="C02">Bajo</option>
-              <option value="C03">Medio bajo</option>
-              <option value="C04">Medio</option>
-              <option value="C05">Medio Alto</option>
-              <option value="C06">Alto</option>
+              <option value="C0">Bajo bajo</option>
+              <option value="C1">Bajo</option>
+              <option value="C2">Medio bajo</option>
+              <option value="C3">Medio</option>
+              <option value="C4">Medio Alto</option>
+              <option value="C5">Alto</option>
             </select>
             <label class="text-body-small-sb">Estrato</label>
           </div>
@@ -476,7 +468,7 @@
 
 
     <div class="button-container">
-      <button (click)="irAFormulario(1)" type="button" class="btn-custom-normal">Atrás</button>
+      <button (click)="goToForm(1)" type="button" class="btn-custom-normal">Atrás</button>
       <button type="button" class="btn-custom-normal mx-3 text-body-heavy">Cancelar</button>
       <button type="submit" class="btn-custom-normal" (click)="onSaveContributorData()">Siguiente</button>
     </div>

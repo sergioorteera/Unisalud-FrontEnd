@@ -10,8 +10,8 @@ export class EmployerDataComponent {
   @Output() cambioFormulario = new EventEmitter<number>();
 
 
-  irAFormulario(numero: number) {
-    this.cambioFormulario.emit(numero);
+  irAFormulario(code: number) {
+    this.cambioFormulario.emit(code);
   }
 
 }

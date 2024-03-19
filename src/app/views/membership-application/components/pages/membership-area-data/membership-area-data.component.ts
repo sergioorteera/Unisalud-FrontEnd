@@ -48,7 +48,7 @@ export class MembershipAreaDataComponent implements OnInit {
     )
   }
 
-  irAFormulario(numero: number) {
+  goToForm(numero: number) {
     this.cambioFormulario.emit(numero);
   }
 

@@ -12,12 +12,12 @@ export class ContributorDataComponent implements OnInit {
 
   @Output() cambioFormulario = new EventEmitter<number>();
 
-  epsAnterior: EpsAnterior[] = [];
-  discapacidad: Discapacidad[] = [];
-  departamento: Departamento[] = [];
-  municipio: Municipio[] = [];
-  pais: Pais[] = [];
-  //ESTE SI - FALTA EL MUNICIPIO O (ES LO MISMO QUE CIUDAD DE NACIMIENTO?)
+  previusEps: EpsAnterior[] = [];
+  discapacidad: Discapacidad[] = []; // FALTA CAMBIAR EL IDIOMA
+  departments: Departamento[] = [];
+  birthMunicipalitiesFiltered: Municipio[] = [];
+  residenceMunicipalitiesFiltered: Municipio[] = [];
+  countries: Pais[] = [];
   contributorDataForm: FormGroup;
   contributorData: DatosCotizante;
 
@@ -134,17 +134,25 @@ export class ContributorDataComponent implements OnInit {
 
   getAffiliationData(): void {
     this.mbsAplAffiliationDataService.getAffiliationData().subscribe((affiliationData: AffiliationDataDetail) => {
-      console.log("este", affiliationData.datos);
-      this.epsAnterior = affiliationData.datos.epsAnterior;
-      this.discapacidad = affiliationData.datos.discapacidad;
-      this.departamento = affiliationData.datos.departamento;
-      this.pais = affiliationData.datos.pais;
-
+      this.previusEps = affiliationData.datos.epsAnterior;
+      this.discapacidad = affiliationData.datos.discapacidad; // TOCA VER COMO SE MANEJAN
+      this.departments = affiliationData.datos.departamento;
+      this.countries = affiliationData.datos.pais;
     });
   }
 
-  irAFormulario(numero: number) {
-    this.cambioFormulario.emit(numero);
+  onBirthDepartmentChange(departmentId: number): void {
+    const selectedDepartment = this.departments.find(depto => depto.id == departmentId);
+    this.birthMunicipalitiesFiltered = selectedDepartment ? selectedDepartment.municipios : [];
+  }
+
+  onResidenceDepartmentChange(departmentId: number): void {
+    const selectedDepartment = this.departments.find(depto => depto.id == departmentId);
+    this.residenceMunicipalitiesFiltered = selectedDepartment ? selectedDepartment.municipios : [];
+  }
+
+  goToForm(code: number) {
+    this.cambioFormulario.emit(code);
   }
 
 }
