@@ -10,18 +10,22 @@ import { ActividadEconomica, AffiliationDataDetail, AreaAfiliaciones, DatosCotiz
 })
 export class ContributorDataComponent implements OnInit {
 
-  @Output() cambioFormulario = new EventEmitter<number>();
+  @Output() changeForm = new EventEmitter<number>();
 
   previusEps: EpsAnterior[] = [];
-  discapacidad: Discapacidad[] = []; // FALTA CAMBIAR EL IDIOMA
+  disabilities: Discapacidad[] = []; // FALTA CAMBIAR EL IDIOMA
   departments: Departamento[] = [];
   birthMunicipalitiesFiltered: Municipio[] = [];
   residenceMunicipalitiesFiltered: Municipio[] = [];
   countries: Pais[] = [];
-  contributorDataForm: FormGroup;
   contributorData: DatosCotizante;
+  physicsDegrees: Discapacidad[] = [];
+  cognitiveDegrees: Discapacidad[] = [];
+  visualDegrees: Discapacidad[] = [];
+  auditoryDegrees: Discapacidad[] = [];
+  contributorDataForm: FormGroup;
 
-
+  idsDisabilities: number[] = [];
 
   constructor(
     private formBuilder: FormBuilder,
@@ -82,8 +86,10 @@ export class ContributorDataComponent implements OnInit {
 
   onSaveContributorData(): void {
     this.contributorData = this.getContributorDataFromForm(this.contributorDataForm);
+    this.idsDisabilities = this.getSelectedDisabilitiesFromForm();
+    this.contributorData.idsDisabilities = this.idsDisabilities;
     console.log(this.contributorData);
-    this.cambioFormulario.emit(3);
+    this.changeForm.emit(3);
   }
 
   private getContributorDataFromForm(contributorDataForm: FormGroup): DatosCotizante {
@@ -111,10 +117,6 @@ export class ContributorDataComponent implements OnInit {
       contributorDataForm.controls['regimen'].value,
       contributorDataForm.controls['tipoSangre'].value,
       contributorDataForm.controls['tipoRh'].value,
-      contributorDataForm.controls['discapacidadFisica'].value,
-      contributorDataForm.controls['discapacidadVisual'].value,
-      contributorDataForm.controls['discapacidadCognitiva'].value,
-      contributorDataForm.controls['discapacidadAuditiva'].value,
       contributorDataForm.controls['deptResidencia'].value, //ESTE DATO SE USA PARA DISMINUIR LAS OPCIONES DEL SIGUIENTE INPUT
       contributorDataForm.controls['idMunicipioUbicacion'].value,
       contributorDataForm.controls['direccion'].value,
@@ -135,9 +137,13 @@ export class ContributorDataComponent implements OnInit {
   getAffiliationData(): void {
     this.mbsAplAffiliationDataService.getAffiliationData().subscribe((affiliationData: AffiliationDataDetail) => {
       this.previusEps = affiliationData.datos.epsAnterior;
-      this.discapacidad = affiliationData.datos.discapacidad; // TOCA VER COMO SE MANEJAN
       this.departments = affiliationData.datos.departamento;
       this.countries = affiliationData.datos.pais;
+      this.disabilities = affiliationData.datos.discapacidad; // TOCA VER COMO SE MANEJAN
+      this.physicsDegrees = this.filterGradesByDescription(this.disabilities, 'Fisica')
+      this.cognitiveDegrees = this.filterGradesByDescription(this.disabilities, 'Cognitiva')
+      this.visualDegrees = this.filterGradesByDescription(this.disabilities, 'Visual')
+      this.auditoryDegrees = this.filterGradesByDescription(this.disabilities, 'Auditiva')
     });
   }
 
@@ -152,7 +158,28 @@ export class ContributorDataComponent implements OnInit {
   }
 
   goToForm(code: number) {
-    this.cambioFormulario.emit(code);
+    this.changeForm.emit(code);
+  }
+
+  filterGradesByDescription(disabilities: Discapacidad[], description: string): Discapacidad[] {
+    return disabilities.filter((disability: Discapacidad) => disability.descripcion === description);
+  }
+
+  getSelectedDisabilitiesFromForm(): number[] {
+    const selectedDisabilities: number[] = [];
+    if (this.contributorDataForm.controls['discapacidadFisica'].value) {
+      selectedDisabilities.push(this.contributorDataForm.controls['discapacidadFisica'].value);
+    }
+    if (this.contributorDataForm.controls['discapacidadVisual'].value) {
+      selectedDisabilities.push(this.contributorDataForm.controls['discapacidadVisual'].value);
+    }
+    if (this.contributorDataForm.controls['discapacidadCognitiva'].value) {
+      selectedDisabilities.push(this.contributorDataForm.controls['discapacidadCognitiva'].value);
+    }
+    if (this.contributorDataForm.controls['discapacidadAuditiva'].value) {
+      selectedDisabilities.push(this.contributorDataForm.controls['discapacidadAuditiva'].value);
+    }
+    return selectedDisabilities;
   }
 
 }

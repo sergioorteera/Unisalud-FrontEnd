@@ -7,11 +7,9 @@ import { Component, EventEmitter, Output } from '@angular/core';
 })
 export class FamilyGroupManagementComponent {
 
-  @Output() cambioFormulario = new EventEmitter<number>();
+  @Output() changeForm = new EventEmitter<number>();
 
-  irAFormulario(code: number) {
-    this.cambioFormulario.emit(code);
-
+  goToForm(code: number) {
+    this.changeForm.emit(code);
   }
-
 }

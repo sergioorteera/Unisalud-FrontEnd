@@ -13,7 +13,7 @@ import { AreaAfiliaciones } from 'src/app/core/model/AffiliationData.model';
 
 export class MembershipAreaDataComponent implements OnInit {
 
-  @Output() cambioFormulario = new EventEmitter<number>();
+  @Output() changeForm = new EventEmitter<number>();
   membershipAreaDataForm: FormGroup;
   membershipAreaData: AreaAfiliaciones;
 
@@ -37,7 +37,7 @@ export class MembershipAreaDataComponent implements OnInit {
   onSaveMembershipAreaData(): void {
     this.membershipAreaData = this.getMembershipAreaDataFromForm(this.membershipAreaDataForm);
     console.log(this.membershipAreaData);
-    this.cambioFormulario.emit(2); //
+    this.changeForm.emit(2); //
   }
 
   private getMembershipAreaDataFromForm(membershipAreaDataForm: FormGroup): AreaAfiliaciones {
@@ -48,8 +48,8 @@ export class MembershipAreaDataComponent implements OnInit {
     )
   }
 
-  goToForm(numero: number) {
-    this.cambioFormulario.emit(numero);
+  goToForm(code: number) {
+    this.changeForm.emit(code);
   }
 
 }

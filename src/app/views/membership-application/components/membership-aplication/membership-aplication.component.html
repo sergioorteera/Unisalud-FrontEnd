@@ -28,16 +28,16 @@
   </ul>
 
   <div *ngIf="formularioActual === 1">
-    <app-membership-area-data (cambioFormulario)="cambiarFormulario($event)"></app-membership-area-data>
+    <app-membership-area-data (changeForm)="cambiarFormulario($event)"></app-membership-area-data>
   </div>
   <div *ngIf="formularioActual === 2">
-    <app-contributor-data (cambioFormulario)="cambiarFormulario($event)"></app-contributor-data>
+    <app-contributor-data (changeForm)="cambiarFormulario($event)"></app-contributor-data>
   </div>
   <div *ngIf="formularioActual === 3">
-    <app-family-group-management (cambioFormulario)="cambiarFormulario($event)"></app-family-group-management>
+    <app-family-group-management (changeForm)="cambiarFormulario($event)"></app-family-group-management>
   </div>
   <div *ngIf="formularioActual === 4">
-    <app-employer-data (cambioFormulario)="cambiarFormulario($event)"></app-employer-data>
+    <app-employer-data (changeForm)="cambiarFormulario($event)"></app-employer-data>
   </div>
 
 

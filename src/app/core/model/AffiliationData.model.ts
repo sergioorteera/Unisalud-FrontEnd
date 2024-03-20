@@ -110,10 +110,7 @@ export class DatosCotizante {
     public regimen: string = '',
     public tipoSangre: string = '',
     public tipoRh: string = '',
-    public discapacidadFisica: number = 0,
-    public discapacidadVisual: number = 0,
-    public discapacidadCognitiva: number = 0,
-    public discapacidadAuditiva: number = 0,
+    public idsDisabilities: number[] = [],
     public deptResidencia: number = 0, //ESTE DATO NO SE ENVÍA
     public idMunicipioUbicacion: number = 0,
     public direccion: string = '',
