@@ -14,6 +14,7 @@ import { AreaAfiliaciones } from 'src/app/core/model/AffiliationData.model';
 export class MembershipAreaDataComponent implements OnInit {
 
   @Output() changeForm = new EventEmitter<number>();
+
   membershipAreaDataForm: FormGroup;
   membershipAreaData: AreaAfiliaciones;
 

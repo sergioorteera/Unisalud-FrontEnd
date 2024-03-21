@@ -266,7 +266,11 @@
           <div class="form-floating">
             <select class="form-select text-body" id="discapacidadFisica" formControlName="discapacidadFisica">
               <option value="null" selected disabled>Seleccionar respuesta</option>
-              <option *ngFor="let degree of physicsDegrees" [value]="degree.id">{{ degree.grado }}</option>
+              <option value="C0">Leve</option>
+              <option value="C1">Moderada</option>
+              <option value="C2">Severa</option>
+              <option value="C3">No aplica</option>
+              <!-- <option *ngFor="let degree of physicsDegrees" [value]="degree.id">{{ degree.grado }}</option> -->
             </select>
             <label class="text-body-small-sb">Discapacidad física</label>
           </div>
@@ -276,7 +280,11 @@
           <div class="form-floating">
             <select class="form-select text-body" id="discapacidadVisual" formControlName="discapacidadVisual">
               <option value="null" selected disabled>Seleccionar respuesta</option>
-              <option *ngFor="let degree of visualDegrees" [value]="degree.id">{{ degree.grado }}</option>
+              <option value="C4">Leve</option>
+              <option value="C5">Moderada</option>
+              <option value="C6">Severa</option>
+              <option value="C7">No aplica</option>
+              <!-- <option *ngFor="let degree of visualDegrees" [value]="degree.id">{{ degree.grado }}</option> -->
             </select>
             <label class="text-body-small-sb">Discapacidad visual</label>
           </div>
@@ -286,7 +294,11 @@
           <div class="form-floating">
             <select class="form-select text-body" id="discapacidadCognitiva" formControlName="discapacidadCognitiva">
               <option value="null" selected disabled>Seleccionar respuesta</option>
-              <option *ngFor="let degree of cognitiveDegrees" [value]="degree.id">{{ degree.grado }}</option>
+              <option value="C8">Leve</option>
+              <option value="C9">Moderada</option>
+              <option value="C10">Severa</option>
+              <option value="C11">No aplica</option>
+              <!-- <option *ngFor="let degree of cognitiveDegrees" [value]="degree.id">{{ degree.grado }}</option> -->
             </select>
             <label class="text-body-small-sb">Discapacidad cognitiva</label>
           </div>
@@ -295,7 +307,11 @@
           <div class="form-floating">
             <select class="form-select text-body" id="discapacidadAuditiva" formControlName="discapacidadAuditiva">
               <option value="null" selected disabled>Seleccionar respuesta</option>
-              <option *ngFor="let degree of auditoryDegrees" [value]="degree.id">{{ degree.grado }}</option>
+              <option value="C12">Leve</option>
+              <option value="C13">Moderada</option>
+              <option value="C14">Severa</option>
+              <option value="C15">No aplica</option>
+              <!-- <option *ngFor="let degree of auditoryDegrees" [value]="degree.id">{{ degree.grado }}</option> -->
             </select>
             <label class="text-body-small-sb">Discapacidad auditiva</label>
           </div>
