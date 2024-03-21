@@ -1,0 +1,80 @@
+.modal-dialog{
+  top: 20%;
+  border-radius: 13px;
+}
+
+.modal-content{
+  width: 590px;
+  height: 220px;
+  border-radius: 13px;
+  box-shadow: 0px 7px 4px 0px rgba(16, 17, 50, 0.25);
+}
+
+.modal-header{
+  border-bottom-width: 2px;
+}
+
+.modal-title{
+  color: var(--blue-secundary);
+  font-family: "TitilliumWeb-SemiBold", sans-serif;
+  font-size: 23px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.modal-body{
+  color: var(--blue-primary);
+  font-family: "OpenSans-Regular", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.btn-outline-primary {
+  font-family: "OpenSans-SemiBold", sans-serif;
+  font-size: 16px;
+  border-color: var(--blue-primary);
+  border-radius: 35px;
+  border: 1px solid var(--blue-primary);
+  color: var(--blue-primary);
+}
+
+.btn-outline-primary:hover {
+  border-color: var(--blue-tertiary);
+  background-color: var(--blue-hover-secundary);
+  color: var(--blue-secundary);
+}
+
+.btn-primary {
+  font-family: "OpenSans-SemiBold", sans-serif;
+  font-size: 16px;
+  border-color: var(--blue-primary);
+  background-color: var(--blue-primary);
+  border-radius: 35px;
+  border: 1px solid var(--blue-primary);
+  color: var(--white);
+}
+
+.btn-outline-secondary{
+  border: none;
+  border-radius: 7px;
+}
+
+.btn-outline-secondary:hover{
+  border: none;
+  border-radius: 7px;
+  background-color: var(--blue-hover);
+}
+
+.btn-primary:hover {
+  background-color: var(--blue-tertiary);
+  border-color: var(--blue-tertiary);
+  border: 1px solid var(--blue-tertiary);
+}
+
+/*
+.btn-close{
+  --bs-btn-close-bg: url("../../../../assets/principal-page/back-icon.svg");
+} */

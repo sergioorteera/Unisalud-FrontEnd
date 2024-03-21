@@ -1,5 +1,7 @@
 <div class="container-fluid">
+
   <form [formGroup]="membershipAreaDataForm" (ngSubmit)="onSaveMembershipAreaData()">
+
     <div class="row">
       <span class="title-two mb-4">1. Información del área de afiliaciones de la unidad de salud</span>
     </div>
@@ -22,9 +24,8 @@
           </select>
           <label class="text-body-small-sb">Tipo de afiliación</label>
         </div>
-
-
       </div>
+
     </div>
 
     <div class="row mb-4">
@@ -38,10 +39,17 @@
 
     <div class="button-container">
       <button type="button" class="btn-custom-disabled" disabled >Atrás</button>
-      <button type="button" class="btn-custom-normal mx-3 text-body-heavy">Cancelar</button>
+      <button type="button" class="btn-custom-normal mx-3 text-body-heavy" (click)="openConfirmationModal()">Cancelar</button>
       <button type="button" class="btn-custom-normal" (click)="onSaveMembershipAreaData()">Siguiente</button>
     </div>
 
   </form>
 
 </div>
+
+<shared-confirm-dialog
+  [modalId]="'modalLaboralData'"
+  [title]="'Guardar cambios'"
+  [message]="'¿Está seguro que desea guardar los cambios?'"
+  (confirm)="pruebaModal()">
+</shared-confirm-dialog>

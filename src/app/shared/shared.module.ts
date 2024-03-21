@@ -5,6 +5,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { RouterModule } from '@angular/router';
+import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dialog.component';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import { RouterModule } from '@angular/router';
     PrincipalPageComponent,
     SidebarComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    ConfirmDialogComponent,
   ],
   imports: [
     CommonModule,
@@ -21,6 +23,7 @@ import { RouterModule } from '@angular/router';
   exports: [
     PrincipalPageComponent,
     SidebarComponent,
+    ConfirmDialogComponent,
   ]
 })
 export class SharedModule { }

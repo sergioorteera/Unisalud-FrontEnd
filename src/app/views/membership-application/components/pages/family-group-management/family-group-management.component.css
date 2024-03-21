@@ -5,11 +5,67 @@
   padding-top: 50px;
   padding-bottom: 50px;
   border-top-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  height: 830px;
 }
 
-.title-page-form{
-  font-family: "FiraSans-Bold";
-  font-size: 32px;
+.button-container {
+  display: flex;
+  justify-content: center;
+  background-color: var(--white);
+}
+
+/* FORMS */
+
+/* estilos label */
+.form-floating label {
+  position: absolute;
+  pointer-events: none;
+  transform: translateY(-50%);
+  top: 40%;
+  padding-left: 30px;
+  padding-right: 30px;
+  color: var(--neutral-70);
+}
+
+/* INPUTS */
+.form-floating .form-control:focus  {
+  border-color: var(--neutral-70); /* Cambiar el color del borde al enfocar y le quita la sombra */
+  box-shadow: none; /* quitar la sombra al enfocar*/
+}
+.form-floating .form-control {
+  border-color: var(--blue); /* Cambia el color del borde sin enfocar */
+  padding-left: 30px;
+  padding-right: 30px;
+  height: 63px;
+}
+/* estilos placeholder  */
+.form-floating .form-control::placeholder {
+  position: absolute;
   color: var(--blue);
-  padding-bottom: 50px;
+  top: 30px;
+  left: 30px;
+  margin: 0;
+}
+
+/* SELECT */
+
+.form-floating .form-select:focus {
+  border-color: var(--neutral-70); /* Cambiar el color del borde al enfocar y le quita la sombra */
+  box-shadow: none; /* quitar la sombra al enfocar*/
+}
+.form-floating .form-select {
+  border-color: var(--blue); /* Cambia el color del borde sin enfocar */
+  padding-left: 30px;
+  padding-right: 30px;
+  height: 63px;
+}
+/* estilos placeholder  */
+.form-floating .form-select::placeholder {
+  position: absolute;
+  color: var(--blue);
+  top: 25px;
+  left: 30px;
+  margin: 0;
 }

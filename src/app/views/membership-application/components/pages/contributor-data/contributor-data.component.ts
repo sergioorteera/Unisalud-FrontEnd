@@ -124,7 +124,7 @@ export class ContributorDataComponent implements OnInit {
     this.contributorData = this.getContributorDataFromForm(this.contributorDataForm);
     this.idsDisabilities = this.getSelectedDisabilitiesFromForm();
     this.contributorData.idsDisabilities = this.idsDisabilities;
-    console.log(this.contributorData);
+    this.mbsAplAffiliationDataService.saveContributorData(this.contributorData);
     this.changeForm.emit(3);
   }
 

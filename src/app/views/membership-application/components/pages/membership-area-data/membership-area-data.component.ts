@@ -1,8 +1,9 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 
 import { MbsAplAffiliationDataService } from '../../../services/mbs-apl-affiliation-data.service';
 import { AreaAfiliaciones } from 'src/app/core/model/AffiliationData.model';
+import { ConfirmDialogComponent } from 'src/app/shared/components/confirm-dialog/confirm-dialog.component';
 
 
 @Component({
@@ -13,6 +14,7 @@ import { AreaAfiliaciones } from 'src/app/core/model/AffiliationData.model';
 
 export class MembershipAreaDataComponent implements OnInit {
 
+  @ViewChild(ConfirmDialogComponent) confirmationModal: ConfirmDialogComponent;
   @Output() changeForm = new EventEmitter<number>();
 
   membershipAreaDataForm: FormGroup;
@@ -37,8 +39,8 @@ export class MembershipAreaDataComponent implements OnInit {
 
   onSaveMembershipAreaData(): void {
     this.membershipAreaData = this.getMembershipAreaDataFromForm(this.membershipAreaDataForm);
-    console.log(this.membershipAreaData);
-    this.changeForm.emit(2); //
+    this.mbsAplAffiliationDataService.saveMembershipAreaData(this.membershipAreaData);
+    this.changeForm.emit(2);
   }
 
   private getMembershipAreaDataFromForm(membershipAreaDataForm: FormGroup): AreaAfiliaciones {
@@ -51,6 +53,15 @@ export class MembershipAreaDataComponent implements OnInit {
 
   goToForm(code: number) {
     this.changeForm.emit(code);
+  }
+
+  openConfirmationModal(): void {
+    this.confirmationModal.open();
+  }
+
+  pruebaModal(){
+    console.log('funiona');
+
   }
 
 }

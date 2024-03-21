@@ -1,0 +1,25 @@
+<div class="modal fade" [id]="modalId" data-bs-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog ">
+    <div class="modal-content">
+      <div class="modal-header row g-0 border-bottom-3">
+        <div class="col-auto d-flex justify-content-start align-items-center">
+          <!-- <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Close"></button> -->
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal" aria-label="Close"
+            (mouseenter)="hovered = true" (mouseleave)="hovered = false">
+            <!-- <img [src]="hovered ? '../../../../assets/principal-page/back-white-icon.svg' : '../../../../assets/principal-page/back-icon.svg'" alt="Icono"> -->
+          </button>
+       </div>
+        <div class="col-auto d-flex justify-content-start align-items-center">
+          <h2 class="modal-title ms-2" id="exampleModalLabel">{{ title }}</h2>
+        </div>
+      </div>
+      <div class="modal-body ms-5 mt-4 border-bottom-0">
+        {{ message }}
+      </div>
+      <div class="modal-footer border-top-0 pe-5 mb-3">
+        <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary px-3" (click)="onConfirm()" data-bs-dismiss="modal">Aceptar</button>
+      </div>
+    </div>
+  </div>
+</div>
